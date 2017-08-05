@@ -1,5 +1,15 @@
 # SPOW-BADO-introgression-scripts
 
+## Introduction
+We here provide the scripts that we developed for analyzing introgression in whole genome sequences obtained from Barred and Spotted Owls.  
+These scripts take a variant call format (vcf) file as input.  
+We created our vcf file using Unified Genotyper.  
+Due to the specifics of our sample set and our analyses, you will not be able to directly use most of these scripts without making some modifications to the code.  
+VCF files produced by other variant callers may require modifications to these scripts for correct parsing of the variant files.  
+We are providing our code here for the purposes of documentation and with the hope that some of our methods may prove useful to others in their own genome-scale analyses.  
+#### Specifics to our analyses that have affected the code
+We set hard filters filtered Our reference individual sample
+
 ## Sliding Window Analyses Pipeline
 Pipe from original vcf file to the ad pct file and use this for the sliding window.  
 You could pipe all the way through, but, since multiple runs of the sliding window routine are likely, we saved the ad_pct.txt file and worked from it.  
