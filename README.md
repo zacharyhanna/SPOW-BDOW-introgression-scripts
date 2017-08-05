@@ -4,7 +4,7 @@ We here provide the scripts that we developed for analyzing introgression in who
 ## Introduction
 These scripts take a variant call format (vcf) file as input. We created our vcf file using UnifiedGenotyper from the Genome Analysis Toolkit (GATK) version 3.4-46 (DePristo et al. 2011; McKenna et al. 2010; Van der Auwera et al. 2013). Due to the specifics of our sample set and our analyses, you will not be able to directly use most of these scripts without making some modifications to the code. VCF files produced by other variant callers may require modifications to these scripts for correct parsing of the variant files. We are providing our code here for the purposes of documentation and with the hope that some of our methods may prove useful to others in their own genome-scale analyses.  
 #### Specifics to our analyses that have affected the code
-VCF file output from UnifiedGenotyper: raw_variants.vcf
+VCF file output from UnifiedGenotyper: raw_variants.vcf  
 We set hard filters filtered Our reference individual sample
 
 ## Sliding Window Analyses Pipeline
@@ -31,9 +31,7 @@ $ awk 'NR==1{b=1;for(i=10;i<=NF;i++)nm[b++]=$i}
      NR>1{for(i=1;i<=NF;i++){split($i,ms,",");
           mminus = (ms[1]-ms[2] > 0) ? ms[1]-ms[2] : 0;
           mplus  = (ms[1]+ms[2] > 1) ? 1 : ms[1]+ms[2]
-          print i, nm[i], ms[1],ms[2],mminus,mplus}}' <(grep -v "^#" 2016Feb18_2maskedaligned_UnifGen_raw_variants.vcf -B1 |head -1) means_stdevs_ad.txt \
- | sort -k3,3n | awk '{printf"%2s\t%12s\t",$1,$2;for(i=3;i<=NF;i++)printf "%-9s\t",$i;print ""}' \
- | cat <(echo -e "Sample#\t Sample_Name\tmean\t\tstdev\t\tmean-stdev\tmean+stdev") -
+          print i, nm[i], ms[1],ms[2],mminus,mplus}}' <(grep -v "^#" raw_variants.vcf -B1 |head -1) means_stdevs_ad.txt | sort -k3,3n | awk '{printf"%2s\t%12s\t",$1,$2;for(i=3;i<=NF;i++)printf "%-9s\t",$i;print ""}' | cat <(echo -e "Sample#\t Sample_Name\tmean\t\tstdev\t\tmean-stdev\tmean+stdev") -
 
 ### Citing the repository
 
