@@ -4,6 +4,7 @@ We here provide the scripts that we developed for analyzing introgression in who
 ## Introduction
 These scripts take a variant call format (vcf) file as input. We created our vcf file using UnifiedGenotyper from the Genome Analysis Toolkit (GATK) version 3.4-46 (DePristo et al. 2011; McKenna et al. 2010; Van der Auwera et al. 2013). Due to the specifics of our sample set and our analyses, you will not be able to directly use most of these scripts without making some modifications to the code. VCF files produced by other variant callers may require modifications to these scripts for correct parsing of the variant files. We are providing our code here for the purposes of documentation and with the hope that some of our methods may prove useful to others in their own genome-scale analyses.  
 #### Specifics to our analyses that have affected the code
+VCF file output from UnifiedGenotyper: raw_variants.vcf
 We set hard filters filtered Our reference individual sample
 
 ## Sliding Window Analyses Pipeline
@@ -11,7 +12,7 @@ Pipe from original vcf file to the ad pct file and use this for the sliding wind
 You could pipe all the way through, but, since multiple runs of the sliding window routine are likely, we saved the ad_pct.txt file and worked from it.  
   
 #### Example of pipeline usage (40,000 bp windows with no overlap):  
-$ ./vcf_qual_filter.sh 2016Feb18_2maskedaligned_UnifGen_raw_variants.vcf | ./AD_pct.sh >ad_pct.txt  
+$ ./vcf_qual_filter.sh raw_variants.vcf | ./AD_pct.sh >ad_pct.txt  
 $ cat ad_pct.txt | ./sliding_window.sh 40000 >wnd_40k_noovlp.txt  
 
 #### can run additional sliding windows, e.g., 40,000 base window sliding 5,000 bases at a time:  
@@ -24,7 +25,7 @@ $ compute_ad_mean_stdev.sh ad_pct.txt >means_stdevs_ad.txt
 $ outliers.sh wnd_40k_noovlp.txt  
 
 ### to get column names
-$ grep -v "^#" 2016Feb18_2maskedaligned_UnifGen_raw_variants.vcf -B1 | head -1  
+$ grep -v "^#" raw_variants.vcf -B1 | head -1  
 ### to merge column names with means and stddev
 $ awk 'NR==1{b=1;for(i=10;i<=NF;i++)nm[b++]=$i}
      NR>1{for(i=1;i<=NF;i++){split($i,ms,",");
