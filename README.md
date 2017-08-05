@@ -8,6 +8,13 @@ VCF file output from UnifiedGenotyper: raw_variants.vcf
 We set hard filters filtered Our reference individual sample
 
 ## Sliding Window Analyses Pipeline
+
+### 1) Filter raw vcf file
+Usage example:
+$ ./vcf_qual_filter.sh raw_variants.vcf > filtered_variants.vcf  
+  
+This script uses MAWK, if available - we used MAWK version 1.2 (Brennan 1994). Otherwise, it will use GNU Awk (GAWK) - we used GAWK version 4.0.1 (Free Software Foundation 2012)
+
 Pipe from original vcf file to the ad pct file and use this for the sliding window.  
 You could pipe all the way through, but, since multiple runs of the sliding window routine are likely, we saved the ad_pct.txt file and worked from it.  
   
@@ -47,6 +54,8 @@ Hanna ZR, Henderson JB, Wall JD. (2017). SPOW-BADO-introgression-scripts. Versio
 
 ### References
 DePristo MA., Banks E., Poplin R., Garimella KV., Maguire JR., Hartl C., Philippakis AA., del Angel G., Rivas MA., Hanna M., McKenna A., Fennell TJ., Kernytsky AM., Sivachenko AY., Cibulskis K., Gabriel SB., Altshuler D., Daly MJ. 2011. A framework for variation discovery and genotyping using next-generation DNA sequencing data. Nature Genetics 43:491–498. DOI: 10.1038/ng.806.  
+  
+Free Software Foundation. 2012. GNU Awk. Version 4.0.1. Available at <https://www.gnu.org/software/gawk/>.  
   
 McKenna A., Hanna M., Banks E., Sivachenko A., Cibulskis K., Kernytsky A., Garimella K., Altshuler D., Gabriel S., Daly M., DePristo MA. 2010. The Genome Analysis Toolkit: A MapReduce framework for analyzing next-generation DNA sequencing data. Genome Research 20:1297–1303. DOI: 10.1101/gr.107524.110.  
   
