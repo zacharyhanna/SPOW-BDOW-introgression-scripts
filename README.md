@@ -25,7 +25,7 @@ $ cat ad_pct.txt | ./sliding_window.sh 40000 >wnd_40k_noovlp.txt
 #### can run additional sliding windows, e.g., 40,000 base window sliding 5,000 bases at a time:  
 $ ./sliding_window.sh ad_pct.txt 40000 5000 >wnd_40k_5k_slide.txt  
 
-### to compute mean and std dev on AD pct file and keep this info for further use do this
+### Compute means and standard deviations on allele depth file (AD_pct.txt) and keep this info for further use
 $ compute_ad_mean_stdev.sh ad_pct.txt >means_stdevs_ad.txt  
 
 ### to check for outliers in the window do this:
@@ -38,7 +38,7 @@ head (GNU coreutils) - we used head (GNU coreutils) version 8.21 (Ihnat et al. 2
   
 $ grep -v "^#" raw_variants.vcf -B1 | head -1  
 
-### Merge column names with means and stddev
+### Merge column (sample) names from vcf with means and standard deviations
 The following requires:  
 cat (GNU coreutils) - we used cat (GNU coreutils) version 8.21 (Granlund & Stallman 2013)  
 echo (GNU coreutils) - we used echo (GNU coreutils) version 8.21 (Fox & Ramey 2013)  
