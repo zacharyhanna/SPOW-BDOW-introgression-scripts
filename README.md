@@ -23,7 +23,8 @@ Specifics to our analyses that have affected the code:
    * Field 16 in the vcf corresponded with the reference Barred Owl sequence.  
 2. Our reference genome had some contaminant or mitochondrial scaffolds, which we removed from our analyses.  
    * You could just take out the line that throws out the following scaffolds: C7961234, C7963448, C7970814, C8091874, scaffold3674.  
-3. We 
+3. We used the hard cutoff of only examining sites with a Phred-scaled probability >50 that a polymorphism exists at that site.  
+   * This was the "QUAL" field, which was field 6 of the vcf 
 
 ### 2) Allele depth calculation
 Usage example:  
