@@ -105,7 +105,7 @@ GNU Grep - we used GNU Grep version 2.16 (Free Software Foundation, 2014)
 head (GNU coreutils) - we used head (GNU coreutils) version 8.21 (Ihnat et al. 2013)  
 sort (GNU coreutils) - we used sort (GNU coreutils) version 8.21 (Haertel & Eggert 2013)    
 
-### Citing the repository
+## Citing the repository
 
 #### Authorship
 Code authors: James B. Henderson, jhenderson@calacademy.org; Zachary R. Hanna, zachanna@berkeley.edu; Jeffrey D. Wall  
@@ -117,7 +117,7 @@ Please cite this repository as follows:
 
 Hanna ZR, Henderson JB, Wall JD. 2017. SPOW-BADO-introgression-scripts. Version 1.0.0. Zenodo. DOI:  
 
-### References
+## References
 DePristo MA., Banks E., Poplin R., Garimella KV., Maguire JR., Hartl C., Philippakis AA., del Angel G., Rivas MA., Hanna M., McKenna A., Fennell TJ., Kernytsky AM., Sivachenko AY., Cibulskis K., Gabriel SB., Altshuler D., Daly MJ. 2011. A framework for variation discovery and genotyping using next-generation DNA sequencing data. Nature Genetics 43:491–498. DOI: 10.1038/ng.806.  
   
 Fox B., Ramey C. 2013. echo (GNU coreutils). Version 8.21. Available at <http://www.gnu.org/software/coreutils/coreutils.html>.  
