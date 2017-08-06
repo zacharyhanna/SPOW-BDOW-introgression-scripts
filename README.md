@@ -19,12 +19,12 @@ If MAWK is not available, uses GNU Awk (GAWK) - we used GAWK version 4.0.1 (Free
   
 Specifics to our analyses that have affected the code:  
 1. We examined only biallelic variant sites fixed for alternative alleles between the reference Spotted and Barred Owl samples.  
-   - Field 43 in the vcf corresponded with the reference Spotted Owl sample.  
-   - Field 16 in the vcf corresponded with the reference Barred Owl sample.  
+   * Field 43 in the vcf corresponded with the reference Spotted Owl sample.  
+   * Field 16 in the vcf corresponded with the reference Barred Owl sample.  
 2. Our reference genome had some contaminant or mitochondrial scaffolds, which we removed from our analyses.  
-   - You could just take out the line that throws out the following scaffolds: C7961234, C7963448, C7970814, C8091874, scaffold3674.  
+   * You could just take out the line that throws out the following scaffolds: C7961234, C7963448, C7970814, C8091874, scaffold3674.  
 3. We only examined sites with a Phred-scaled probability >50 that a polymorphism exists at that site.  
-   - This was the "QUAL" field, which was field 6 of the vcf 
+   * This was the "QUAL" field, which was field 6 of the vcf 
 4. We required that the Phred-scaled genotype quality, which states the confidence in the genotype of a particular sample, must be >=30 for both the Spotted Owl and Barred Owl reference samples.
 5. We required that the Barred Owl reference sample had zero reads that supported the Spotted Owl allele at a given variant site.
 6. We required that the Spotted Owl reference sample had zero reads that supported the Barred Owl allele at a given variant site and >=10 reads in support of the Spotted Owl allele.
