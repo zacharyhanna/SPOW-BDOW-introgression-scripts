@@ -33,12 +33,12 @@ $ outliers.sh wnd_40k_noovlp.txt
 
 ### to get column names
 The following requires:  
-awk  
+GNU Awk - we used GNU Awk version 4.0.1 (Free Software Foundation, 2012)  
 GNU Grep - we used GNU Grep version 2.16 (Free Software Foundation, 2014)  
 head (GNU coreutils) - we used head (GNU coreutils) version 8.21 (Ihnat et al. 2013)  
-sort  
-cat  
-echo  
+sort (GNU coreutils) - we used sort (GNU coreutils) version 8.21 (Haertel & Eggert 2013)    
+cat (GNU coreutils) - we used cat (GNU coreutils) version 8.21 (Granlund & Stallman 2013)  
+echo (GNU coreutils) - we used echo (GNU coreutils) version 8.21 (Fox & Ramey 2013)  
   
 $ grep -v "^#" raw_variants.vcf -B1 | head -1  
 ### to merge column names with means and stddev
@@ -66,6 +66,16 @@ DePristo MA., Banks E., Poplin R., Garimella KV., Maguire JR., Hartl C., Philipp
 Fox B., Ramey C. 2013. echo (GNU coreutils). Version 8.21. Available at <http://www.gnu.org/software/coreutils/coreutils.html>.  
   
 Free Software Foundation. 2012. GNU Awk. Version 4.0.1. Available at <https://www.gnu.org/software/gawk/>.  
+  
+Free Software Foundation 2014. GNU Grep. Version 2.16. Available at <https://www.gnu.org/software/grep/>.  
+  
+Granlund T., Stallman RM. 2013. cat (GNU coreutils). Version 8.21. Available at <http://www.gnu.org/software/coreutils/coreutils.html>.  
+  
+Haertel M., Eggert P. 2013. sort (GNU coreutils). Version 8.21. Available at <http://www.gnu.org/software/coreutils/coreutils.html>.  
+  
+Ihnat DM., MacKenzie D., Meyering J. 2013. cut (GNU coreutils). Version 8.21. Available at <http://www.gnu.org/software/coreutils/coreutils.html>.  
+  
+MacKenzie D. 2013. fold (GNU coreutils). Version 8.21. Available at <http://www.gnu.org/software/coreutils/coreutils.html>.  
   
 MacKenzie D., Meyering J. 2013. head (GNU coreutils). Version 8.21. Available at <http://www.gnu.org/software/coreutils/coreutils.html>.  
   
