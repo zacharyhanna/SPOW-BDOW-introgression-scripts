@@ -27,7 +27,9 @@ Specifics to our analyses that have affected the code:
    * This was the "QUAL" field, which was field 6 of the vcf 
 4. We required that the Phred-scaled genotype quality, which states the confidence in the genotype of a particular sample, must be >=30 for both the Spotted Owl and Barred Owl reference samples.
 5. We required that the Barred Owl reference sample had zero reads that supported the Spotted Owl allele at a given variant site.
+   * We examined the unfiltered allele depth (field AD) to make this determination.
 6. We required that the Spotted Owl reference sample had zero reads that supported the Barred Owl allele at a given variant site and >=10 reads in support of the Spotted Owl allele.
+   * We examined the unfiltered allele depth (field AD) to make this determination.
 
 ### 2) Allele depth calculation
 Usage example:  
