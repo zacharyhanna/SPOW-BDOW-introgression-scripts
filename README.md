@@ -10,31 +10,37 @@ We set hard filters filtered Our reference individual sample
 ## Sliding Window Analyses Pipeline
 
 ### 1) Filter raw vcf file
-Usage example:
+Usage example:  
 $ ./vcf_qual_filter.sh raw_variants.vcf > filtered_variants.vcf  
   
 This script uses MAWK, if available - we used MAWK version 1.2 (Brennan 1994). Otherwise, it will use GNU Awk (GAWK) - we used GAWK version 4.0.1 (Free Software Foundation 2012)
 
-Pipe from original vcf file to the ad pct file and use this for the sliding window.  
-You could pipe all the way through, but, since multiple runs of the sliding window routine are likely, we saved the ad_pct.txt file and worked from it.  
+
   
 ### 2) Allele depth calculation
+Usage example:  
+$ cat filtered_variants.vcf | ./AD_pct.sh >ad_pct.txt  
+
 The "AD_pct.sh" shell script requires:  
 GNU Awk - we used GNU Awk version 4.0.1 (Free Software Foundation, 2012)  
-cut (GNU coreutils)
+cut (GNU coreutils) - we used cut (GNU coreutils) version 8.21 (Ihnat et al. 2013)
 
 ### 3) Sliding window calculation  
-The "sliding_window.sh" shell script requires:  
-GNU Grep - we used GNU Grep version 2.16 (Free Software Foundation, 2014)  
-  
+Usage example:  
 $ cat ad_pct.txt | ./sliding_window.sh 40000 >wnd_40k_noovlp.txt  
 The above example calculates 40,000 bp windows with no overlap.  
+  
+The "sliding_window.sh" shell script requires:  
+GNU Grep - we used GNU Grep version 2.16 (Free Software Foundation, 2014)  
 
 #### Example of running full sliding window pipeline
 As above, this example calculates 40,000 bp windows with no overlap.
   
 $ ./vcf_qual_filter.sh raw_variants.vcf | ./AD_pct.sh >ad_pct.txt  
 $ cat ad_pct.txt | ./sliding_window.sh 40000 >wnd_40k_noovlp.txt  
+
+The first pipe starts with the original vcf file and outputs to the ad_pct.txt file, which is then used in the second pipe for the sliding window analysis.  
+These scripts enable you to pipe all the way through, but, since multiple runs of the sliding window routine are likely, we saved the ad_pct.txt file and worked from it for multiple sliding window analyses.  
 
 ##### Example of a running a different sliding window
 This example calculates 40,000 base windows sliding 5,000 bases at a time.  
