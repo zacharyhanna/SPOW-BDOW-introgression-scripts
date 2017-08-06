@@ -38,7 +38,7 @@ Usage example:
 $ cat ad_pct.txt | ./sliding_window.sh 40000 >wnd_40k_noovlp.txt  
 The above example calculates 40,000 bp windows with no overlap.  
   
-"sliding_window.sh" shell script requirement:  
+"sliding_window.sh" shell script requirements:  
 GNU Grep - we used GNU Grep version 2.16 (Free Software Foundation, 2014)  
 
 #### Example of running full sliding window pipeline
@@ -65,14 +65,14 @@ The shell script requires:
 GNU Grep - we used GNU Grep version 2.16 (Free Software Foundation, 2014)  
 
 ### Check for outliers in the window
-Usage example:
+Usage example:  
 $ outliers.sh wnd_40k_noovlp.txt  
 
 ### Get column (sample) names from vcf
 Usage example:  
 $ grep -v "^#" raw_variants.vcf -B1 | head -1  
   
-The following command requires:  
+The command requires:  
 GNU Grep - we used GNU Grep version 2.16 (Free Software Foundation, 2014)  
 head (GNU coreutils) - we used head (GNU coreutils) version 8.21 (Ihnat et al. 2013)  
 
@@ -84,7 +84,7 @@ $ awk 'NR==1{b=1;for(i=10;i<=NF;i++)nm[b++]=$i}
           mplus  = (ms[1]+ms[2] > 1) ? 1 : ms[1]+ms[2]
           print i, nm[i], ms[1],ms[2],mminus,mplus}}' <(grep -v "^#" raw_variants.vcf -B1 |head -1) means_stdevs_ad.txt | sort -k3,3n | awk '{printf"%2s\t%12s\t",$1,$2;for(i=3;i<=NF;i++)printf "%-9s\t",$i;print ""}' | cat <(echo -e "Sample#\t Sample_Name\tmean\t\tstdev\t\tmean-stdev\tmean+stdev") -
   
-The following command requires:  
+The command requires:  
 cat (GNU coreutils) - we used cat (GNU coreutils) version 8.21 (Granlund & Stallman 2013)  
 echo (GNU coreutils) - we used echo (GNU coreutils) version 8.21 (Fox & Ramey 2013)  
 GNU Awk - we used GNU Awk version 4.0.1 (Free Software Foundation, 2012)  
