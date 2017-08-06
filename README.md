@@ -18,16 +18,33 @@ This script uses MAWK, if available - we used MAWK version 1.2 (Brennan 1994). O
 Pipe from original vcf file to the ad pct file and use this for the sliding window.  
 You could pipe all the way through, but, since multiple runs of the sliding window routine are likely, we saved the ad_pct.txt file and worked from it.  
   
-#### Example of pipeline usage (40,000 bp windows with no overlap):  
+### 2) Allele depth calculation
+The "AD_pct.sh" shell script requires:  
+GNU Awk - we used GNU Awk version 4.0.1 (Free Software Foundation, 2012)  
+cut (GNU coreutils)
+
+### 3) Sliding window calculation  
+The "sliding_window.sh" shell script requires:  
+GNU Grep - we used GNU Grep version 2.16 (Free Software Foundation, 2014)  
+  
+$ cat ad_pct.txt | ./sliding_window.sh 40000 >wnd_40k_noovlp.txt  
+The above example calculates 40,000 bp windows with no overlap.  
+
+#### Example of running full sliding window pipeline
+As above, this example calculates 40,000 bp windows with no overlap.
+  
 $ ./vcf_qual_filter.sh raw_variants.vcf | ./AD_pct.sh >ad_pct.txt  
 $ cat ad_pct.txt | ./sliding_window.sh 40000 >wnd_40k_noovlp.txt  
 
-#### can run additional sliding windows, e.g., 40,000 base window sliding 5,000 bases at a time:  
+##### Example of a running a different sliding window
+This example calculates 40,000 base windows sliding 5,000 bases at a time.  
+  
 $ ./sliding_window.sh ad_pct.txt 40000 5000 >wnd_40k_5k_slide.txt  
 
 ### Compute means and standard deviations on allele depth file (AD_pct.txt)
 We are keeping the output for further use in the file "means_stdevs_ad.txt".  
-The script requires:  
+  
+The shell script requires:  
 GNU Grep - we used GNU Grep version 2.16 (Free Software Foundation, 2014)  
   
 $ compute_ad_mean_stdev.sh ad_pct.txt >means_stdevs_ad.txt  
@@ -36,14 +53,14 @@ $ compute_ad_mean_stdev.sh ad_pct.txt >means_stdevs_ad.txt
 $ outliers.sh wnd_40k_noovlp.txt  
 
 ### Get column (sample) names from vcf
-The following requires:  
+The following command requires:  
 GNU Grep - we used GNU Grep version 2.16 (Free Software Foundation, 2014)  
 head (GNU coreutils) - we used head (GNU coreutils) version 8.21 (Ihnat et al. 2013)  
   
 $ grep -v "^#" raw_variants.vcf -B1 | head -1  
 
 ### Merge column (sample) names from vcf with means and standard deviations
-The following requires:  
+The following command requires:  
 cat (GNU coreutils) - we used cat (GNU coreutils) version 8.21 (Granlund & Stallman 2013)  
 echo (GNU coreutils) - we used echo (GNU coreutils) version 8.21 (Fox & Ramey 2013)  
 GNU Awk - we used GNU Awk version 4.0.1 (Free Software Foundation, 2012)  
