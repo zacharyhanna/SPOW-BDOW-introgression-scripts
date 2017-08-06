@@ -16,6 +16,13 @@ $ ./vcf_qual_filter.sh raw_variants.vcf > filtered_variants.vcf
 vcf_qual_filter.sh shell script requirements:  
 MAWK, if available - we used MAWK version 1.2 (Brennan 1994).  
 If MAWK is not available, uses GNU Awk (GAWK) - we used GAWK version 4.0.1 (Free Software Foundation 2012)
+  
+Specifics to our analyses that have affected the code:  
+1. We examined only biallelic variant sites fixed for alternative alleles between the reference Spotted and Barred Owl samples.
+* Field 43 in the vcf corresponded with the reference Spotted Owl sequence.  
+* Field 16 in the vcf corresponded with the reference Barred Owl sequence.  
+2. 
+
 
 ### 2) Allele depth calculation
 Usage example:  
