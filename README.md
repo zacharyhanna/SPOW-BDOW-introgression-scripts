@@ -25,7 +25,11 @@ $ cat ad_pct.txt | ./sliding_window.sh 40000 >wnd_40k_noovlp.txt
 #### can run additional sliding windows, e.g., 40,000 base window sliding 5,000 bases at a time:  
 $ ./sliding_window.sh ad_pct.txt 40000 5000 >wnd_40k_5k_slide.txt  
 
-### Compute means and standard deviations on allele depth file (AD_pct.txt) and keep this info for further use
+### Compute means and standard deviations on allele depth file (AD_pct.txt)
+We are keeping the output for further use in the file "means_stdevs_ad.txt".  
+The script requires:  
+GNU Grep - we used GNU Grep version 2.16 (Free Software Foundation, 2014)  
+  
 $ compute_ad_mean_stdev.sh ad_pct.txt >means_stdevs_ad.txt  
 
 ### to check for outliers in the window do this:
