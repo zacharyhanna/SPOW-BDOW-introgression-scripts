@@ -31,17 +31,22 @@ $ compute_ad_mean_stdev.sh ad_pct.txt >means_stdevs_ad.txt
 ### to check for outliers in the window do this:
 $ outliers.sh wnd_40k_noovlp.txt  
 
-### to get column names
+### Get column (sample) names from vcf
 The following requires:  
+GNU Grep - we used GNU Grep version 2.16 (Free Software Foundation, 2014)  
+head (GNU coreutils) - we used head (GNU coreutils) version 8.21 (Ihnat et al. 2013)  
+  
+$ grep -v "^#" raw_variants.vcf -B1 | head -1  
+
+### Merge column names with means and stddev
+The following requires:  
+cat (GNU coreutils) - we used cat (GNU coreutils) version 8.21 (Granlund & Stallman 2013)  
+echo (GNU coreutils) - we used echo (GNU coreutils) version 8.21 (Fox & Ramey 2013)  
 GNU Awk - we used GNU Awk version 4.0.1 (Free Software Foundation, 2012)  
 GNU Grep - we used GNU Grep version 2.16 (Free Software Foundation, 2014)  
 head (GNU coreutils) - we used head (GNU coreutils) version 8.21 (Ihnat et al. 2013)  
 sort (GNU coreutils) - we used sort (GNU coreutils) version 8.21 (Haertel & Eggert 2013)    
-cat (GNU coreutils) - we used cat (GNU coreutils) version 8.21 (Granlund & Stallman 2013)  
-echo (GNU coreutils) - we used echo (GNU coreutils) version 8.21 (Fox & Ramey 2013)  
   
-$ grep -v "^#" raw_variants.vcf -B1 | head -1  
-### to merge column names with means and stddev
 $ awk 'NR==1{b=1;for(i=10;i<=NF;i++)nm[b++]=$i}
      NR>1{for(i=1;i<=NF;i++){split($i,ms,",");
           mminus = (ms[1]-ms[2] > 0) ? ms[1]-ms[2] : 0;
