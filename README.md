@@ -32,6 +32,14 @@ $ compute_ad_mean_stdev.sh ad_pct.txt >means_stdevs_ad.txt
 $ outliers.sh wnd_40k_noovlp.txt  
 
 ### to get column names
+The following requires:  
+awk  
+GNU Grep - we used GNU Grep version 2.16 (Free Software Foundation, 2014)  
+head (GNU coreutils) - we used head (GNU coreutils) version 8.21 (Ihnat et al. 2013)  
+sort  
+cat  
+echo  
+  
 $ grep -v "^#" raw_variants.vcf -B1 | head -1  
 ### to merge column names with means and stddev
 $ awk 'NR==1{b=1;for(i=10;i<=NF;i++)nm[b++]=$i}
@@ -55,7 +63,11 @@ Hanna ZR, Henderson JB, Wall JD. 2017. SPOW-BADO-introgression-scripts. Version 
 ### References
 DePristo MA., Banks E., Poplin R., Garimella KV., Maguire JR., Hartl C., Philippakis AA., del Angel G., Rivas MA., Hanna M., McKenna A., Fennell TJ., Kernytsky AM., Sivachenko AY., Cibulskis K., Gabriel SB., Altshuler D., Daly MJ. 2011. A framework for variation discovery and genotyping using next-generation DNA sequencing data. Nature Genetics 43:491–498. DOI: 10.1038/ng.806.  
   
+Fox B., Ramey C. 2013. echo (GNU coreutils). Version 8.21. Available at <http://www.gnu.org/software/coreutils/coreutils.html>.  
+  
 Free Software Foundation. 2012. GNU Awk. Version 4.0.1. Available at <https://www.gnu.org/software/gawk/>.  
+  
+MacKenzie D., Meyering J. 2013. head (GNU coreutils). Version 8.21. Available at <http://www.gnu.org/software/coreutils/coreutils.html>.  
   
 McKenna A., Hanna M., Banks E., Sivachenko A., Cibulskis K., Kernytsky A., Garimella K., Altshuler D., Gabriel S., Daly M., DePristo MA. 2010. The Genome Analysis Toolkit: A MapReduce framework for analyzing next-generation DNA sequencing data. Genome Research 20:1297–1303. DOI: 10.1101/gr.107524.110.  
   
