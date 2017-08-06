@@ -18,10 +18,11 @@ MAWK, if available - we used MAWK version 1.2 (Brennan 1994).
 If MAWK is not available, uses GNU Awk (GAWK) - we used GAWK version 4.0.1 (Free Software Foundation 2012)
   
 Specifics to our analyses that have affected the code:  
-1. We examined only biallelic variant sites fixed for alternative alleles between the reference Spotted and Barred Owl samples.
+1. We examined only biallelic variant sites fixed for alternative alleles between the reference Spotted and Barred Owl samples.  
 * Field 43 in the vcf corresponded with the reference Spotted Owl sequence.  
 * Field 16 in the vcf corresponded with the reference Barred Owl sequence.  
-2. 
+2. Our reference genome had some contaminant or mitochondrial scaffolds, which we removed from our analyses.  
+* You could just take out the line that throws out the following scaffolds: C7961234, C7963448, C7970814, C8091874, scaffold3674  
 
 
 ### 2) Allele depth calculation
