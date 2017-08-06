@@ -13,15 +13,15 @@ We set hard filters filtered Our reference individual sample
 Usage example:  
 $ ./vcf_qual_filter.sh raw_variants.vcf > filtered_variants.vcf  
   
-This script uses MAWK, if available - we used MAWK version 1.2 (Brennan 1994). Otherwise, it will use GNU Awk (GAWK) - we used GAWK version 4.0.1 (Free Software Foundation 2012)
+vcf_qual_filter.sh shell script requirements:  
+MAWK, if available - we used MAWK version 1.2 (Brennan 1994).  
+If MAWK is not available, uses GNU Awk (GAWK) - we used GAWK version 4.0.1 (Free Software Foundation 2012)
 
-
-  
 ### 2) Allele depth calculation
 Usage example:  
 $ cat filtered_variants.vcf | ./AD_pct.sh >ad_pct.txt  
 
-The "AD_pct.sh" shell script requires:  
+"AD_pct.sh" shell script requirements:  
 GNU Awk - we used GNU Awk version 4.0.1 (Free Software Foundation, 2012)  
 cut (GNU coreutils) - we used cut (GNU coreutils) version 8.21 (Ihnat et al. 2013)
 
@@ -30,7 +30,7 @@ Usage example:
 $ cat ad_pct.txt | ./sliding_window.sh 40000 >wnd_40k_noovlp.txt  
 The above example calculates 40,000 bp windows with no overlap.  
   
-The "sliding_window.sh" shell script requires:  
+"sliding_window.sh" shell script requirement:  
 GNU Grep - we used GNU Grep version 2.16 (Free Software Foundation, 2014)  
 
 #### Example of running full sliding window pipeline
