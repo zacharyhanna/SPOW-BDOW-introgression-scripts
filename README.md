@@ -95,7 +95,7 @@ sort (GNU coreutils) - we used sort (GNU coreutils) version 8.21 (Haertel & Egge
 ### Citing the repository
 
 #### Authorship
-Code authors: Zachary R. Hanna, zachanna@berkeley.edu; James B. Henderson, jhenderson@calacademy.org; Jeffrey D. Wall  
+Code authors: James B. Henderson, jhenderson@calacademy.org; Zachary R. Hanna, zachanna@berkeley.edu; Jeffrey D. Wall  
 README.md author: Zachary R. Hanna  
 
 #### Version 1.0.0
