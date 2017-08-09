@@ -38,6 +38,17 @@ Specifics to our analyses that have affected the code:
 6. We required that the Spotted Owl reference sample had zero reads that supported the Barred Owl allele at a given variant site and >=10 reads in support of the Spotted Owl allele.
    * We examined the unfiltered allele depth (field AD) to make this determination.
 
+### 2) Site coverage calculation
+Calculate the average total coverage of a site and the standard deviation.  
+We are using the filtered set of sites for calculation of the average coverage.  
+  
+Usage example:  
+$ cat filtered_variants.vcf | ./dp_cov_script.sh 
+meanDP = 129.19,stdevDP = 34.2783,number of sites = 5821431  
+
+### 3) Exclude sites with excessive coverage
+We chose to exclude sites with coverage in excess of the mean + 5  
+
 ### 2) Allele depth calculation
 Usage example:  
 $ cat filtered_variants.vcf | ./AD_pct.sh >ad_pct.txt  
