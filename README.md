@@ -39,7 +39,7 @@ Specifics to our analyses that have affected the code:
    * We examined the unfiltered allele depth (field AD) to make this determination.
 
 ### 2) Site coverage calculation
-Calculate the average total coverage of a site and the standard deviation.  
+Calculate the average total coverage of a site and the standard deviation (σ).  
 We are using the filtered set of sites for calculation of the average coverage.  
   
 Usage example:  
@@ -47,7 +47,7 @@ $ cat filtered_variants.vcf | ./dp_cov_script.sh
 meanDP = 129.19,stdevDP = 34.2783,number of sites = 5821431  
 
 ### 3) Exclude sites with excessive coverage
-We chose to exclude sites with coverage in excess of the mean + 5  
+We chose to exclude sites with coverage in excess of the mean + 5σ.    
 
 ### 2) Allele depth calculation
 Usage example:  
