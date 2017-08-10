@@ -8,6 +8,7 @@ We here provide the scripts that we developed for analyzing introgression in who
   * [2. Site coverage calculation](#2-site-coverage-calculation)
   * [3. Exclude sites with excessive coverage](#3-exclude-sites-with-excessive-coverage)
   * [4. Calculation of coverage depth per sample](#4-calculation-of-coverage-depth-per-sample)
+  * [5. Allele depth calculation](#5-allele-depth-calculation)
 * [Citing the Repository](#citing-the-repository)  
 * [References](#references)  
 
@@ -65,7 +66,7 @@ This step is not actually required in the pipeline, but we calculated the mean a
 Usage example:  
 $ cat filtered_variants2.vcf | ./DP_means_std_dev.sh | head -1 >filtered_variants2_dp_means_stdev.txt  
 
-### 4) Allele depth calculation
+### 5) Allele depth calculation
 Usage example:  
 $ cat filtered_variants2.vcf | ./AD_pct.sh >ad_pct.txt  
 
@@ -73,7 +74,7 @@ $ cat filtered_variants2.vcf | ./AD_pct.sh >ad_pct.txt
 GNU Awk - we used GNU Awk version 4.0.1 (Free Software Foundation, 2012)  
 cut (GNU coreutils) - we used cut (GNU coreutils) version 8.21 (Ihnat et al. 2013)
 
-### 5) Sliding window calculation  
+### 6) Sliding window calculation  
 Usage example:  
 $ cat ad_pct.txt | ./sliding_window.sh 40000 >wnd_40k_noovlp.txt  
 The above example calculates 40,000 bp windows with no overlap.  
