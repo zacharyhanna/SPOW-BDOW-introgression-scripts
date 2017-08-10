@@ -44,13 +44,15 @@ We are using the filtered set of sites for calculation of the average coverage.
   
 Usage example:  
 $ cat filtered_variants.vcf | ./dp_cov_script.sh 
+  
+Example output:  
 meanDP = 129.19,stdevDP = 34.2783,number of sites = 5821431  
 
 ### 3) Exclude sites with excessive coverage
 We chose to exclude sites with coverage in excess of the mean + 5σ (>300 nt in our data set), as suggested by the GATK documentation (https://software.broadinstitute.org/gatk/guide/article?id=3225).  
   
 Usage example:  
-$ 
+$ cat filtered_variants.vcf | ./vcf_dp_filter.sh >filtered_variants2.vcf  
 
 ### 2) Allele depth calculation
 Usage example:  
