@@ -2,12 +2,11 @@
 We here provide the scripts that we developed for analyzing introgression in whole genome sequences obtained from Barred and Spotted Owls. 
 
 ## Contents
-[Introduction](#introduction)  
-[Sliding Window Analyses Pipeline](#sliding-window-analyses-pipeline)  
-* [1. Filter raw vcf file](#1-filter-raw-vcf-file)  
-  
-[Citing the Repository](#citing-the-repository)  
-[References](#references)  
+* [Introduction](#introduction)  
+* [Sliding Window Analyses Pipeline](#sliding-window-analyses-pipeline)  
+  * [1. Filter raw vcf file](#1-filter-raw-vcf-file)  
+* [Citing the Repository](#citing-the-repository)  
+* [References](#references)  
 
 ## Introduction
 These scripts take a variant call format (vcf) file as input. We created our vcf file using UnifiedGenotyper from the Genome Analysis Toolkit (GATK) version 3.4-46 (DePristo et al. 2011; McKenna et al. 2010; Van der Auwera et al. 2013). Due to the specifics of our sample set and our analyses, you will not be able to directly use most of these scripts without making some modifications to the code. VCF files produced by other variant callers may require modifications to these scripts for correct parsing of the variant files. We are providing our code here for the purposes of documentation and with the hope that some of our methods may prove useful to others in their own genome-scale analyses.  
