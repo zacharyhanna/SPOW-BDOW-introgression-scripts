@@ -4,7 +4,8 @@ We here provide the scripts that we developed for analyzing introgression in who
 ## Contents
 [Introduction](#introduction)  
 [Sliding Window Analyses Pipeline](#sliding-window-analyses-pipeline)  
-* [1) Filter raw vcf file](#1-filter-raw-vcf-file)  
+* [1. Filter raw vcf file](#1-filter-raw-vcf-file)  
+  
 [Citing the Repository](#citing-the-repository)  
 [References](#references)  
 
@@ -17,7 +18,7 @@ These scripts take a variant call format (vcf) file as input. We created our vcf
 
 ## Sliding Window Analyses Pipeline
 
-### 1) Filter raw vcf file
+### 1. Filter raw vcf file
 Usage example:  
 $ ./vcf_qual_filter.sh raw_variants.vcf > filtered_variants.vcf  
   
