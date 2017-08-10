@@ -50,20 +50,22 @@ Example output:
 meanDP = 129.19,stdevDP = 34.2783,number of sites = 5821431  
 ```
 ### 3) Exclude sites with excessive coverage
-We chose to exclude sites with coverage in excess of the mean + 5σ (>300 nt in our data set), as suggested by the GATK documentation (https://software.broadinstitute.org/gatk/guide/article?id=3225).  
+We excluded sites with coverage in excess of the mean + 5σ (>300 nt in our data set), as suggested by the GATK documentation (https://software.broadinstitute.org/gatk/guide/article?id=3225).  
   
 Usage example:  
 $ cat filtered_variants.vcf | ./vcf_dp_filter.sh >filtered_variants2.vcf  
 
-### 2) Allele depth calculation
+### 4) Calculation of coverage depth per sample
+
+### 4) Allele depth calculation
 Usage example:  
-$ cat filtered_variants.vcf | ./AD_pct.sh >ad_pct.txt  
+$ cat filtered_variants2.vcf | ./AD_pct.sh >ad_pct.txt  
 
 "AD_pct.sh" shell script requirements:  
 GNU Awk - we used GNU Awk version 4.0.1 (Free Software Foundation, 2012)  
 cut (GNU coreutils) - we used cut (GNU coreutils) version 8.21 (Ihnat et al. 2013)
 
-### 3) Sliding window calculation  
+### 5) Sliding window calculation  
 Usage example:  
 $ cat ad_pct.txt | ./sliding_window.sh 40000 >wnd_40k_noovlp.txt  
 The above example calculates 40,000 bp windows with no overlap.  
