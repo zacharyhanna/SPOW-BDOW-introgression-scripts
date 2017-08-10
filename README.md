@@ -39,7 +39,7 @@ Specifics to our analyses that have affected the code:
    * We examined the unfiltered allele depth (field AD) to make this determination.
 
 ### 2) Site coverage calculation
-Calculate the average total coverage of a site and the standard deviation (σ).  
+Calculate the mean total coverage at a site and the standard deviation (σ).  
 We are using the filtered set of sites for calculation of the average coverage.  
   
 Usage example:  
@@ -56,6 +56,10 @@ Usage example:
 $ cat filtered_variants.vcf | ./vcf_dp_filter.sh >filtered_variants2.vcf  
 
 ### 4) Calculation of coverage depth per sample
+This step is not actually required in the pipeline, but we calculated the mean and standard deviation (σ) of the coverage depth for each sample across all of the sites in our final filtered set of SNPs.  
+  
+Usage example:  
+$ cat filtered_variants2.vcf | ./DP_means_std_dev.sh | head -1 >filtered_variants2_dp_means_stdev.txt  
 
 ### 4) Allele depth calculation
 Usage example:  
