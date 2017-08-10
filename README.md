@@ -4,7 +4,7 @@ We here provide the scripts that we developed for analyzing introgression in who
 ## Contents
 [Introduction](#introduction)  
 [Sliding Window Analyses Pipeline](#sliding-window-analyses-pipeline)  
-[1) Filter raw vcf file](#1--filter-raw vcf-file)  
+[1) Filter raw vcf file](#1-filter-raw vcf-file)  
 [Citing the Repository](#citing-the-repository)  
 [References](#references)  
 
