@@ -7,6 +7,7 @@ We here provide the scripts that we developed for analyzing introgression in who
   * [1. Filter raw vcf file](#1-filter-raw-vcf-file)
   * [2. Site coverage calculation](#2-site-coverage-calculation)
   * [3. Exclude sites with excessive coverage](#3-exclude-sites-with-excessive-coverage)
+  * [4. Calculation of coverage depth per sample](#4-calculation-of-coverage-depth-per-sample)
 * [Citing the Repository](#citing-the-repository)  
 * [References](#references)  
 
