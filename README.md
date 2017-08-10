@@ -4,7 +4,8 @@ We here provide the scripts that we developed for analyzing introgression in who
 ## Contents
 * [Introduction](#introduction)  
 * [Sliding Window Analyses Pipeline](#sliding-window-analyses-pipeline)  
-  * [1. Filter raw vcf file](#1-filter-raw-vcf-file)  
+  * [1. Filter raw vcf file](#1-filter-raw-vcf-file)
+  * [2. Site coverage calculation](#2-site-coverage-calculation)
 * [Citing the Repository](#citing-the-repository)  
 * [References](#references)  
 
@@ -39,7 +40,7 @@ Specifics to our analyses that have affected the code:
 6. We required that the Spotted Owl reference sample had zero reads that supported the Barred Owl allele at a given variant site and >=10 reads in support of the Spotted Owl allele.
    * We examined the unfiltered allele depth (field AD) to make this determination.
 
-### 2) Site coverage calculation
+### 2. Site coverage calculation
 Calculate the mean total coverage at a site and the standard deviation (σ).  
 We are using the filtered set of sites for calculation of the average coverage.  
   
