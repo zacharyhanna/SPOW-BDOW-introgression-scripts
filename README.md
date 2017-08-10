@@ -6,6 +6,7 @@ We here provide the scripts that we developed for analyzing introgression in who
 * [Sliding Window Analyses Pipeline](#sliding-window-analyses-pipeline)  
   * [1. Filter raw vcf file](#1-filter-raw-vcf-file)
   * [2. Site coverage calculation](#2-site-coverage-calculation)
+  * [3. Exclude sites with excessive coverage](#3-exclude-sites-with-excessive-coverage)
 * [Citing the Repository](#citing-the-repository)  
 * [References](#references)  
 
