@@ -1,5 +1,5 @@
 # SPOW-BADO-introgression-scripts
-We here provide the scripts that we developed for analyzing introgression in whole genome sequences obtained from Barred and Spotted Owls. 
+We here provide the scripts that we developed for analyzing introgression in whole genome sequences obtained from XXX. 
 
 ## Contents
 * [Introduction](#introduction)  
