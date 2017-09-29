@@ -11,7 +11,8 @@ We here provide the scripts that we developed for analyzing introgression in who
   * [5.1 Allele depth calculation](#51-allele-depth-calculation)
   * [5.2 Extended allele depth calculation](#52-extended-allele-depth-calculation)
   * [6. Sliding window calculation](#6-sliding-window-calculation)
-  * [Compute means and standard deviations on allele depth file (AD_pct.txt)](#compute-means-and-standard-deviations-on-allele-depth-file)
+  * [7. Compute means and standard deviations on allele depth file](#7-compute-means-and-standard-deviations-on-allele-depth-file)
+    * [7.1 Get sample names from vcf](71-get-sample-names-from-vcf)
 * [Citing the Repository](#citing-the-repository)  
 * [References](#references)  
 
@@ -104,7 +105,7 @@ This example calculates 40,000 base windows sliding 5,000 bases at a time.
   
 $ ./sliding_window.sh ad_pct.txt 40000 5000 >wnd_40k_5k_slide.txt  
 
-### Compute means and standard deviations on allele depth file
+### 7. Compute means and standard deviations on allele depth file
 AD_pct.txt : allele depth file from above examples  
 We are keeping the output for further use in the file "means_stdevs_ad.txt".  
   
@@ -114,11 +115,7 @@ $ compute_ad_mean_stdev.sh ad_pct.txt >means_stdevs_ad.txt
 The shell script requires:  
 GNU Grep - we used GNU Grep version 2.16 (Free Software Foundation, 2014)  
 
-### Check for outliers in the window
-Usage example:  
-$ outliers.sh wnd_40k_noovlp.txt  
-
-### Get column (sample) names from vcf
+#### 7.1 Get sample names from vcf
 Usage example:  
 $ grep -v "^#" raw_variants.vcf -B1 | head -1  
   
@@ -126,7 +123,7 @@ The command requires:
 GNU Grep - we used GNU Grep version 2.16 (Free Software Foundation, 2014)  
 head (GNU coreutils) - we used head (GNU coreutils) version 8.21 (Ihnat et al. 2013)  
 
-### Merge column (sample) names from vcf with means and standard deviations
+#### 7.2 Merge sample names from vcf with means and standard deviations
 Usage example:  
 $ awk 'NR==1{b=1;for(i=10;i<=NF;i++)nm[b++]=$i}
      NR>1{for(i=1;i<=NF;i++){split($i,ms,",");
@@ -140,7 +137,11 @@ echo (GNU coreutils) - we used echo (GNU coreutils) version 8.21 (Fox & Ramey 20
 GNU Awk - we used GNU Awk version 4.0.1 (Free Software Foundation, 2012)  
 GNU Grep - we used GNU Grep version 2.16 (Free Software Foundation, 2014)  
 head (GNU coreutils) - we used head (GNU coreutils) version 8.21 (Ihnat et al. 2013)  
-sort (GNU coreutils) - we used sort (GNU coreutils) version 8.21 (Haertel & Eggert 2013)    
+sort (GNU coreutils) - we used sort (GNU coreutils) version 8.21 (Haertel & Eggert 2013)  
+
+### Check for outliers in the window
+Usage example:  
+$ outliers.sh wnd_40k_noovlp.txt  
 
 ## Citing the repository
 
