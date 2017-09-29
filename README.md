@@ -76,6 +76,10 @@ Usage example:
 ```
 $ cat filtered_variants2.vcf | ./DP_means_std_dev.sh | head -1 >filtered_variants2_dp_means_stdev.txt  
 ```
+Example output:
+```
+$ cat filtered_variants2_dp_means_stdev.txt
+```
 ### 5. Allele depth calculation
 There are two versions of this script whose output function with different downstream scripts.  
 Both "AD_pct.sh" and "AD_pct_ex.sh" require:  
