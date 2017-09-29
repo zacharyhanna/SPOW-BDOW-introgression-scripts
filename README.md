@@ -95,7 +95,8 @@ $ cat filtered_variants2.vcf | ./AD_pct.sh >ad_pct.txt
 Example output:
 ```
 $ head -n 2 ad_pct.txt
-
+scaffold18 506 -1 -1 0 1 -1 0 0 -1 0 -1 0 -1 -1 -1 -1 -1 0 -1 0 0 -1 0 0 0 0 0 -1 -1 -1 0 0 1 1 1 1 1 -1 0 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 1 -1 0 1 1
+scaffold18 520 0 -1 -1 1 -1 0 0 -1 0 -1 0 -1 -1 -1 -1 -1 0 -1 0 0 -1 0 0 0 0 0 -1 -1 -1 0 0 1 -1 1 -1 1 -1 0 -1 -1 -1 0 -1 -1 -1 -1 -1 1 -1 1 -1 0 1 0.67
 ```
 Output is "spotted owl ancestry percentage:coverage for sample at site (number of sequences)".  
 Ancestry percentage is between 0 and 1 and is the percentage of the sequences that support the spotted owl allele at this fixed site.  
