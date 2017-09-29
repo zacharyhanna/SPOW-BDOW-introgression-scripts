@@ -199,9 +199,15 @@ GNU Grep - we used GNU Grep version 2.16 (Free Software Foundation, 2014)
 head (GNU coreutils) - we used head (GNU coreutils) version 8.21 (Ihnat et al. 2013)  
 sort (GNU coreutils) - we used sort (GNU coreutils) version 8.21 (Haertel & Eggert 2013)  
 
-### Check for outliers in the window
+### Check for window outliers
 Usage example:  
-$ outliers.sh wnd_40k_noovlp.txt  
+$ python  
+
+We ran this script utilizing the following required software (other versions of these will probably also work):  
+Python version 2.7.12 (Python Software Foundation, 2016)
+matplotlib version 1.5.1 (Hunter, 2007; Matplotlib Development Team, 2016)
+NumPy version 1.10.4 ??(NumPy Developers, 2016)
+SciPy version 0.17.0 ()  
 
 ## Citing the repository
 
@@ -228,6 +234,8 @@ Granlund T., Stallman RM. 2013. cat (GNU coreutils). Version 8.21. Available at 
   
 Haertel M., Eggert P. 2013. sort (GNU coreutils). Version 8.21. Available at <http://www.gnu.org/software/coreutils/coreutils.html>.  
   
+Hunter 2007.  
+  
 Ihnat DM., MacKenzie D., Meyering J. 2013. cut (GNU coreutils). Version 8.21. Available at <http://www.gnu.org/software/coreutils/coreutils.html>.  
   
 MacKenzie D. 2013. fold (GNU coreutils). Version 8.21. Available at <http://www.gnu.org/software/coreutils/coreutils.html>.  
@@ -235,5 +243,11 @@ MacKenzie D. 2013. fold (GNU coreutils). Version 8.21. Available at <http://www.
 MacKenzie D., Meyering J. 2013. head (GNU coreutils). Version 8.21. Available at <http://www.gnu.org/software/coreutils/coreutils.html>.  
   
 McKenna A., Hanna M., Banks E., Sivachenko A., Cibulskis K., Kernytsky A., Garimella K., Altshuler D., Gabriel S., Daly M., DePristo MA. 2010. The Genome Analysis Toolkit: A MapReduce framework for analyzing next-generation DNA sequencing data. Genome Research 20:1297–1303. DOI: 10.1101/gr.107524.110.  
+  
+Matplotlib Development Team 2016. matplotlib. Version 1.5.1. Available at http://matplotlib.org.  
+  
+NumPy Developers 2016. NumPy. Version 1.10.4. Available at http://www.numpy.org.  
+  
+Python Software Foundation 2016. Python. Version 2.7.12. Available at https://www.python.org.  
   
 Van der Auwera GA., Carneiro MO., Hartl C., Poplin R., del Angel G., Levy-Moonshine A., Jordan T., Shakir K., Roazen D., Thibault J., Banks E., Garimella KV., Altshuler D., Gabriel S., DePristo MA. 2013. From FastQ data to high confidence variant calls: the Genome Analysis Toolkit best practices pipeline. Current Protocols in Bioinformatics 11:11.10.1-11.10.33. DOI: 10.1002/0471250953.bi1110s43.  
