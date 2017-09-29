@@ -204,9 +204,9 @@ Usage example:
 $ python  
 
 We ran this script utilizing the following required software (other versions of these will probably also work):  
-Python version 2.7.12 (Python Software Foundation, 2016)
-matplotlib version 1.5.1 (Hunter, 2007; Matplotlib Development Team, 2016)
-NumPy version 1.10.4 ??(NumPy Developers, 2016)
+Python version 2.7.12 (Python Software Foundation, 2016)  
+matplotlib version 1.5.1 (Hunter, 2007; Matplotlib Development Team, 2016)  
+NumPy version 1.10.4 ??(NumPy Developers, 2016)  
 SciPy version 0.17.0 ()  
 
 ## Citing the repository
