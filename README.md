@@ -85,7 +85,7 @@ cut (GNU coreutils) - we used cut (GNU coreutils) version 8.21 (Ihnat et al. 201
 
 #### 5.2 Extended allele depth calculation
 This script returns the number of reads for a sample at a site in addition to the percentage ancestry.  
-Usage example:
+Usage example:  
 $ cat filtered_variants2.vcf | ./AD_pct_ex.sh >ad_pct_ex.txt  
 
 ### 6. Sliding window calculation  
