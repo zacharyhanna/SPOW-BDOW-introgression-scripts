@@ -11,7 +11,7 @@ We here provide the scripts that we developed for analyzing introgression in who
   * [5.1 Allele depth calculation](#51-allele-depth-calculation)
   * [5.2 Extended allele depth calculation](#52-extended-allele-depth-calculation)
   * [6. Sliding window calculation](#6-sliding-window-calculation)
-  * [Compute means and standard deviations on allele depth file (AD_pct.txt)](#compute-means-and-standard-deviations-on-allele-depth-file-\(AD\_pcttxt\))
+  * [Compute means and standard deviations on allele depth file (AD_pct.txt)](#compute-means-and-standard-deviations-on-allele-depth-file)
 * [Citing the Repository](#citing-the-repository)  
 * [References](#references)  
 
@@ -104,7 +104,8 @@ This example calculates 40,000 base windows sliding 5,000 bases at a time.
   
 $ ./sliding_window.sh ad_pct.txt 40000 5000 >wnd_40k_5k_slide.txt  
 
-### Compute means and standard deviations on allele depth file (AD_pct.txt)
+### Compute means and standard deviations on allele depth file
+AD_pct.txt : allele depth file from above examples  
 We are keeping the output for further use in the file "means_stdevs_ad.txt".  
   
 Usage example:  
