@@ -87,7 +87,13 @@ cut (GNU coreutils) - we used cut (GNU coreutils) version 8.21 (Ihnat et al. 201
 This script returns the number of reads for a sample at a site in addition to the percentage ancestry.  
 Usage example:  
 $ cat filtered_variants2.vcf | ./AD_pct_ex.sh >ad_pct_ex.txt  
-
+  
+Example output:  
+```
+$ head 2017Aug08_UnifGen_filt_dpfilt_AdPctEx.txt -n 2
+scaffold18 506 -1:0 -1:0 0:1 1:2 -1:0 0:1 0:17 -1:0 0:1 -1:0 0:1 -1:0 -1:0 -1:0 -1:0 -1:0 0:2 -1:0 0:2 0:1 -1:0 0:2 0:2 0:4 0:6 0:2 -1:0 -1:0 -1:0 0:1 0:2 1:2 1:2 1:52 1:1 1:2 -1:0 0:1 -1:0 -1:0 -1:0 0:1 -1:0 -1:0 -1:0 -1:0 -1:0 -1:0 -1:0 1:3 -1:0 0:6 1:1 1:2 
+scaffold18 520 0:1 -1:0 -1:0 1:2 -1:0 0:1 0:19 -1:0 0:3 -1:0 0:1 -1:0 -1:0 -1:0 -1:0 -1:0 0:2 -1:0 0:2 0:1 -1:0 0:2 0:2 0:4 0:7 0:1 -1:0 -1:0 -1:0 0:1 0:1 1:2 -1:0 1:52 -1:0 1:2 -1:0 0:1 -1:0 -1:0 -1:0 0:1 -1:0 -1:0 -1:0 -1:0 -1:0 1:1 -1:0 1:3 -1:0 0:6 1:1 0.67:3 
+```
 ### 6. Sliding window calculation  
 Usage example:  
 $ cat ad_pct.txt | ./sliding_window.sh 40000 >wnd_40k_noovlp.txt  
