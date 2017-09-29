@@ -12,7 +12,7 @@ We here provide the scripts that we developed for analyzing introgression in who
   * [5.2 Extended allele depth calculation](#52-extended-allele-depth-calculation)
   * [6. Sliding window calculation](#6-sliding-window-calculation)
   * [7. Compute means and standard deviations on allele depth file](#7-compute-means-and-standard-deviations-on-allele-depth-file)
-    * [7.1 Get sample names from vcf](71-get-sample-names-from-vcf)
+  * [7.1 Get sample names from vcf](71-get-sample-names-from-vcf)
 * [Citing the Repository](#citing-the-repository)  
 * [References](#references)  
 
