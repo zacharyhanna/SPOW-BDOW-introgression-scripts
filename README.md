@@ -98,8 +98,8 @@ $ head -n 2 ad_pct.txt
 scaffold18 506 -1 -1 0 1 -1 0 0 -1 0 -1 0 -1 -1 -1 -1 -1 0 -1 0 0 -1 0 0 0 0 0 -1 -1 -1 0 0 1 1 1 1 1 -1 0 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 1 -1 0 1 1
 scaffold18 520 0 -1 -1 1 -1 0 0 -1 0 -1 0 -1 -1 -1 -1 -1 0 -1 0 0 -1 0 0 0 0 0 -1 -1 -1 0 0 1 -1 1 -1 1 -1 0 -1 -1 -1 0 -1 -1 -1 -1 -1 1 -1 1 -1 0 1 0.67
 ```
-Output is "spotted owl ancestry percentage:coverage for sample at site (number of sequences)".  
-Ancestry percentage is between 0 and 1 and is the percentage of the sequences that support the spotted owl allele at this fixed site.  
+Each space-separated field after the scaffold and position fields is "spotted owl ancestry percentage:coverage for sample at site (number of sequences)".  
+Ancestry percentage is between 0 and 1 and is the percentage of the sequences that support the Spotted Owl allele at this site fixed between our Spotted and Barred Owl reference sequences.  
 "-1:0" is output for no data for a sample at a site 
 #### 5.2 Extended allele depth calculation
 This script returns the number of reads for a sample at a site in addition to the percentage ancestry.  
