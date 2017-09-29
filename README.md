@@ -11,7 +11,7 @@ We here provide the scripts that we developed for analyzing introgression in who
   * [5.1 Allele depth calculation](#51-allele-depth-calculation)
   * [5.2 Extended allele depth calculation](#52-extended-allele-depth-calculation)
   * [6. Sliding window calculation](#6-sliding-window-calculation)
-  * [Compute means and standard deviations on allele depth file (AD_pct.txt)](#compute-means-and-standard-deviations-on-allele-depth-file-(AD_pcttxt))
+  * [Compute means and standard deviations on allele depth file (AD_pct.txt)](#compute-means-and-standard-deviations-on-allele-depth-file-AD_pcttxt)
 * [Citing the Repository](#citing-the-repository)  
 * [References](#references)  
 
