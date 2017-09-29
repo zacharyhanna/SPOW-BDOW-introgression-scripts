@@ -106,6 +106,9 @@ $ head -n 2 ad_pct_ex.txt
 scaffold18 506 -1:0 -1:0 0:1 1:2 -1:0 0:1 0:17 -1:0 0:1 -1:0 0:1 -1:0 -1:0 -1:0 -1:0 -1:0 0:2 -1:0 0:2 0:1 -1:0 0:2 0:2 0:4 0:6 0:2 -1:0 -1:0 -1:0 0:1 0:2 1:2 1:2 1:52 1:1 1:2 -1:0 0:1 -1:0 -1:0 -1:0 0:1 -1:0 -1:0 -1:0 -1:0 -1:0 -1:0 -1:0 1:3 -1:0 0:6 1:1 1:2 
 scaffold18 520 0:1 -1:0 -1:0 1:2 -1:0 0:1 0:19 -1:0 0:3 -1:0 0:1 -1:0 -1:0 -1:0 -1:0 -1:0 0:2 -1:0 0:2 0:1 -1:0 0:2 0:2 0:4 0:7 0:1 -1:0 -1:0 -1:0 0:1 0:1 1:2 -1:0 1:52 -1:0 1:2 -1:0 0:1 -1:0 -1:0 -1:0 0:1 -1:0 -1:0 -1:0 -1:0 -1:0 1:1 -1:0 1:3 -1:0 0:6 1:1 0.67:3 
 ```
+Output is "spotted owl ancestry percentage:coverage for sample at site (number of sequences)".  
+Ancestry percentage is between 0 and 1 and is the percentage of the sequences that support the spotted owl allele at this fixed site.  
+"-1:0" is output for no data for a sample at a site  
 ### 6. Sliding window calculation  
 Usage example:  
 ```
