@@ -161,7 +161,7 @@ We are keeping the output for further use in the file "means_stdevs_ad.txt".
   
 Usage example:  
 ```
-$ compute_ad_mean_stdev.sh ad_pct.txt >means_stdevs_ad.txt    
+$ ./compute_ad_mean_stdev.sh ad_pct.txt >means_stdevs_ad.txt    
 ```  
 The shell script requires:  
 GNU Grep - we used GNU Grep version 2.16 (Free Software Foundation, 2014)  
