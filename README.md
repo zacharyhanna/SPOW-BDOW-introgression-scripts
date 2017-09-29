@@ -246,8 +246,10 @@ McKenna A., Hanna M., Banks E., Sivachenko A., Cibulskis K., Kernytsky A., Garim
   
 Matplotlib Development Team 2016. matplotlib. Version 1.5.1. Available at http://matplotlib.org.  
   
-NumPy Developers 2016. NumPy. Version 1.10.4. Available at http://www.numpy.org.  
+NumPy Developers. 2016. NumPy. Version 1.10.4. [Accessed 2017 Sep 29]. Available from: https://github.com/numpy/numpy.  
   
 Python Software Foundation 2016. Python. Version 2.7.12. Available at https://www.python.org.  
+  
+SciPy developers. 2016. SciPy. Version 0.17.0. [Accessed 2017 Sep 29]. Available from: https://github.com/scipy/scipy.  
   
 Van der Auwera GA., Carneiro MO., Hartl C., Poplin R., del Angel G., Levy-Moonshine A., Jordan T., Shakir K., Roazen D., Thibault J., Banks E., Garimella KV., Altshuler D., Gabriel S., DePristo MA. 2013. From FastQ data to high confidence variant calls: the Genome Analysis Toolkit best practices pipeline. Current Protocols in Bioinformatics 11:11.10.1-11.10.33. DOI: 10.1002/0471250953.bi1110s43.  
