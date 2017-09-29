@@ -234,7 +234,7 @@ Granlund T., Stallman RM. 2013. cat (GNU coreutils). Version 8.21. Available at 
   
 Haertel M., Eggert P. 2013. sort (GNU coreutils). Version 8.21. Available at <http://www.gnu.org/software/coreutils/coreutils.html>.  
   
-Hunter 2007.  
+Hunter JD. 2007. Matplotlib: A 2D graphics environment. Computing In Science & Engineering. 9:90–95. doi: 10.1109/MCSE.2007.55.  
   
 Ihnat DM., MacKenzie D., Meyering J. 2013. cut (GNU coreutils). Version 8.21. Available at <http://www.gnu.org/software/coreutils/coreutils.html>.  
   
