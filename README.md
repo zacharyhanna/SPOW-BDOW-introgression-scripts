@@ -93,7 +93,11 @@ $ cat filtered_variants2.vcf | ./AD_pct.sh >ad_pct.txt
 Example output:
 ```
 $ head -n 2 ad_pct.txt
+
 ```
+Output is "spotted owl ancestry percentage:coverage for sample at site (number of sequences)".  
+Ancestry percentage is between 0 and 1 and is the percentage of the sequences that support the spotted owl allele at this fixed site.  
+"-1:0" is output for no data for a sample at a site 
 #### 5.2 Extended allele depth calculation
 This script returns the number of reads for a sample at a site in addition to the percentage ancestry.  
 Usage example:  
