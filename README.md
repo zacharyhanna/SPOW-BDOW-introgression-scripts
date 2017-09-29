@@ -66,7 +66,7 @@ This step is not actually required in the pipeline, but we calculated the mean a
 Usage example:  
 $ cat filtered_variants2.vcf | ./DP_means_std_dev.sh | head -1 >filtered_variants2_dp_means_stdev.txt  
 
-### 5. Allele depth calculation
+### 5.1 Allele depth calculation
 Usage example:  
 $ cat filtered_variants2.vcf | ./AD_pct.sh >ad_pct.txt  
 
@@ -74,6 +74,7 @@ $ cat filtered_variants2.vcf | ./AD_pct.sh >ad_pct.txt
 GNU Awk - we used GNU Awk version 4.0.1 (Free Software Foundation, 2012)  
 cut (GNU coreutils) - we used cut (GNU coreutils) version 8.21 (Ihnat et al. 2013)
 
+### 5.2 Extended allel
 ### 6. Sliding window calculation  
 Usage example:  
 $ cat ad_pct.txt | ./sliding_window.sh 40000 >wnd_40k_noovlp.txt  
