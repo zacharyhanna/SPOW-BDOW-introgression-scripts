@@ -143,7 +143,7 @@ scaffold12      50001   100000  199     0.0258621 0.0447761 0.0396175 1 0.040293
 ```
 Output is tab-separated.
 The line beginning with "#" is a summary line for the scaffold. The first field is the scaffold, second field is the start position of the first SNP on the scaffold, third field is the position of the last snp on that scaffold, fourth field is the number of snps in the scaffold. The fields following this are the average ancestry for all of the windows on this scaffold.  
-The successive lines give:  
+The successive lines provide:  
 
 Field 1 | Field 2 | Field 3 | Field 4 | Fields 5-  
 --- | --- | --- | --- | ---  
