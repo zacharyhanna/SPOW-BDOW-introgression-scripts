@@ -9,6 +9,7 @@ We here provide the scripts that we developed for analyzing introgression in who
   * [3. Exclude sites with excessive coverage](#3-exclude-sites-with-excessive-coverage)
   * [4. Calculation of coverage depth per sample](#4-calculation-of-coverage-depth-per-sample)
   * [5.1 Allele depth calculation](#51-allele-depth-calculation)
+  * [5.2 Extended allele depth calculation](#52-extended-allele-depth-calculation)
 * [Citing the Repository](#citing-the-repository)  
 * [References](#references)  
 
