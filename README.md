@@ -29,8 +29,9 @@ These scripts take a variant call format (vcf) file as input. We created our vcf
 
 ### 1. Filter raw vcf file
 Usage example:  
+```
 $ ./vcf_qual_filter.sh raw_variants.vcf > filtered_variants.vcf  
-  
+```  
 vcf_qual_filter.sh shell script requirements:  
 MAWK, if available - we used MAWK version 1.2 (Brennan 1994).  
 If MAWK is not available, uses GNU Awk (GAWK) - we used GAWK version 4.0.1 (Free Software Foundation 2012)
@@ -54,8 +55,9 @@ Calculate the mean total coverage at a site and the standard deviation (σ).
 We are using the filtered set of sites for calculation of the average coverage.  
   
 Usage example:  
+```
 $ cat filtered_variants.vcf | ./dp_cov_script.sh 
-  
+```  
 Example output:  
 ```
 meanDP = 129.19,stdevDP = 34.2783,number of sites = 5821431  
@@ -64,21 +66,24 @@ meanDP = 129.19,stdevDP = 34.2783,number of sites = 5821431
 We excluded sites with coverage in excess of the mean + 5σ (we only kept sites with coverage <301 nt in our data set), as suggested by the GATK documentation (https://software.broadinstitute.org/gatk/guide/article?id=3225).  
   
 Usage example:  
+```
 $ cat filtered_variants.vcf | ./vcf_dp_filter.sh >filtered_variants2.vcf  
-
+```
 ### 4. Calculation of coverage depth per sample
 This step is not actually required in the pipeline, but we calculated the mean and standard deviation (σ) of the coverage depth for each sample across all of the sites in our final filtered set of SNPs.  
   
 Usage example:  
+```
 $ cat filtered_variants2.vcf | ./DP_means_std_dev.sh | head -1 >filtered_variants2_dp_means_stdev.txt  
-
+```
 ### 5. Allele depth calculation
 There are two versions of this script whose output function with different downstream scripts.  
 
 #### 5.1 Allele depth only calculation
 Usage example:  
+```
 $ cat filtered_variants2.vcf | ./AD_pct.sh >ad_pct.txt  
-
+```
 "AD_pct.sh" shell script requirements:  
 GNU Awk - we used GNU Awk version 4.0.1 (Free Software Foundation, 2012)  
 cut (GNU coreutils) - we used cut (GNU coreutils) version 8.21 (Ihnat et al. 2013)
@@ -86,17 +91,20 @@ cut (GNU coreutils) - we used cut (GNU coreutils) version 8.21 (Ihnat et al. 201
 #### 5.2 Extended allele depth calculation
 This script returns the number of reads for a sample at a site in addition to the percentage ancestry.  
 Usage example:  
+```
 $ cat filtered_variants2.vcf | ./AD_pct_ex.sh >ad_pct_ex.txt  
-  
+```  
 Example output:  
 ```
-$ head 2017Aug08_UnifGen_filt_dpfilt_AdPctEx.txt -n 2
+$ head ad_pct_ex.txt -n 2
 scaffold18 506 -1:0 -1:0 0:1 1:2 -1:0 0:1 0:17 -1:0 0:1 -1:0 0:1 -1:0 -1:0 -1:0 -1:0 -1:0 0:2 -1:0 0:2 0:1 -1:0 0:2 0:2 0:4 0:6 0:2 -1:0 -1:0 -1:0 0:1 0:2 1:2 1:2 1:52 1:1 1:2 -1:0 0:1 -1:0 -1:0 -1:0 0:1 -1:0 -1:0 -1:0 -1:0 -1:0 -1:0 -1:0 1:3 -1:0 0:6 1:1 1:2 
 scaffold18 520 0:1 -1:0 -1:0 1:2 -1:0 0:1 0:19 -1:0 0:3 -1:0 0:1 -1:0 -1:0 -1:0 -1:0 -1:0 0:2 -1:0 0:2 0:1 -1:0 0:2 0:2 0:4 0:7 0:1 -1:0 -1:0 -1:0 0:1 0:1 1:2 -1:0 1:52 -1:0 1:2 -1:0 0:1 -1:0 -1:0 -1:0 0:1 -1:0 -1:0 -1:0 -1:0 -1:0 1:1 -1:0 1:3 -1:0 0:6 1:1 0.67:3 
 ```
 ### 6. Sliding window calculation  
 Usage example:  
+```
 $ cat ad_pct.txt | ./sliding_window.sh 40000 >wnd_40k_noovlp.txt  
+```
 The above example calculates 40,000 bp windows with no overlap.  
   
 "sliding_window.sh" shell script requirements:  
@@ -104,10 +112,10 @@ GNU Grep - we used GNU Grep version 2.16 (Free Software Foundation, 2014)
 
 #### Example of running full sliding window pipeline
 As above, this example calculates 40,000 bp windows with no overlap.
-  
+```  
 $ ./vcf_qual_filter.sh raw_variants.vcf | ./AD_pct.sh >ad_pct.txt  
 $ cat ad_pct.txt | ./sliding_window.sh 40000 >wnd_40k_noovlp.txt  
-
+```
 The first pipe starts with the original vcf file and outputs to the ad_pct.txt file, which is then used in the second pipe for the sliding window analysis.  
 These scripts enable you to pipe all the way through, but, since multiple runs of the sliding window routine are likely, we saved the ad_pct.txt file and worked from it for multiple sliding window analyses.  
 
