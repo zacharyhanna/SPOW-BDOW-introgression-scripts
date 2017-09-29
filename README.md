@@ -88,7 +88,7 @@ $ cat filtered_variants2.vcf | ./AD_pct.sh >ad_pct.txt
 ```
 Example output:
 ```
-$ head -n 2
+$ head -n 2 ad_pct.txt
 ```
 #### 5.2 Extended allele depth calculation
 This script returns the number of reads for a sample at a site in addition to the percentage ancestry.  
@@ -98,7 +98,7 @@ $ cat filtered_variants2.vcf | ./AD_pct_ex.sh >ad_pct_ex.txt
 ```  
 Example output:  
 ```
-$ -n 2 head ad_pct_ex.txt
+$ head -n 2 ad_pct_ex.txt
 scaffold18 506 -1:0 -1:0 0:1 1:2 -1:0 0:1 0:17 -1:0 0:1 -1:0 0:1 -1:0 -1:0 -1:0 -1:0 -1:0 0:2 -1:0 0:2 0:1 -1:0 0:2 0:2 0:4 0:6 0:2 -1:0 -1:0 -1:0 0:1 0:2 1:2 1:2 1:52 1:1 1:2 -1:0 0:1 -1:0 -1:0 -1:0 0:1 -1:0 -1:0 -1:0 -1:0 -1:0 -1:0 -1:0 1:3 -1:0 0:6 1:1 1:2 
 scaffold18 520 0:1 -1:0 -1:0 1:2 -1:0 0:1 0:19 -1:0 0:3 -1:0 0:1 -1:0 -1:0 -1:0 -1:0 -1:0 0:2 -1:0 0:2 0:1 -1:0 0:2 0:2 0:4 0:7 0:1 -1:0 -1:0 -1:0 0:1 0:1 1:2 -1:0 1:52 -1:0 1:2 -1:0 0:1 -1:0 -1:0 -1:0 0:1 -1:0 -1:0 -1:0 -1:0 -1:0 1:1 -1:0 1:3 -1:0 0:6 1:1 0.67:3 
 ```
