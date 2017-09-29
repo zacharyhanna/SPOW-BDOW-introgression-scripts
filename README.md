@@ -78,16 +78,18 @@ $ cat filtered_variants2.vcf | ./DP_means_std_dev.sh | head -1 >filtered_variant
 ```
 ### 5. Allele depth calculation
 There are two versions of this script whose output function with different downstream scripts.  
-
+Both "AD_pct.sh" and "AD_pct_ex.sh" require:  
+GNU Awk - we used GNU Awk version 4.0.1 (Free Software Foundation, 2012)  
+cut (GNU coreutils) - we used cut (GNU coreutils) version 8.21 (Ihnat et al. 2013)
 #### 5.1 Allele depth only calculation
 Usage example:  
 ```
 $ cat filtered_variants2.vcf | ./AD_pct.sh >ad_pct.txt  
 ```
-"AD_pct.sh" shell script requirements:  
-GNU Awk - we used GNU Awk version 4.0.1 (Free Software Foundation, 2012)  
-cut (GNU coreutils) - we used cut (GNU coreutils) version 8.21 (Ihnat et al. 2013)
-
+Example output:
+```
+$ head -n 2
+```
 #### 5.2 Extended allele depth calculation
 This script returns the number of reads for a sample at a site in addition to the percentage ancestry.  
 Usage example:  
@@ -96,7 +98,7 @@ $ cat filtered_variants2.vcf | ./AD_pct_ex.sh >ad_pct_ex.txt
 ```  
 Example output:  
 ```
-$ head ad_pct_ex.txt -n 2
+$ -n 2 head ad_pct_ex.txt
 scaffold18 506 -1:0 -1:0 0:1 1:2 -1:0 0:1 0:17 -1:0 0:1 -1:0 0:1 -1:0 -1:0 -1:0 -1:0 -1:0 0:2 -1:0 0:2 0:1 -1:0 0:2 0:2 0:4 0:6 0:2 -1:0 -1:0 -1:0 0:1 0:2 1:2 1:2 1:52 1:1 1:2 -1:0 0:1 -1:0 -1:0 -1:0 0:1 -1:0 -1:0 -1:0 -1:0 -1:0 -1:0 -1:0 1:3 -1:0 0:6 1:1 1:2 
 scaffold18 520 0:1 -1:0 -1:0 1:2 -1:0 0:1 0:19 -1:0 0:3 -1:0 0:1 -1:0 -1:0 -1:0 -1:0 -1:0 0:2 -1:0 0:2 0:1 -1:0 0:2 0:2 0:4 0:7 0:1 -1:0 -1:0 -1:0 0:1 0:1 1:2 -1:0 1:52 -1:0 1:2 -1:0 0:1 -1:0 -1:0 -1:0 0:1 -1:0 -1:0 -1:0 -1:0 -1:0 1:1 -1:0 1:3 -1:0 0:6 1:1 0.67:3 
 ```
