@@ -72,7 +72,10 @@ This step is not actually required in the pipeline, but we calculated the mean a
 Usage example:  
 $ cat filtered_variants2.vcf | ./DP_means_std_dev.sh | head -1 >filtered_variants2_dp_means_stdev.txt  
 
-### 5.1 Allele depth calculation
+### 5. Allele depth calculation
+There are two versions of this script whose output function with different downstream scripts.  
+
+#### 5.1 Allele depth only calculation
 Usage example:  
 $ cat filtered_variants2.vcf | ./AD_pct.sh >ad_pct.txt  
 
@@ -80,7 +83,7 @@ $ cat filtered_variants2.vcf | ./AD_pct.sh >ad_pct.txt
 GNU Awk - we used GNU Awk version 4.0.1 (Free Software Foundation, 2012)  
 cut (GNU coreutils) - we used cut (GNU coreutils) version 8.21 (Ihnat et al. 2013)
 
-### 5.2 Extended allele depth calculation
+#### 5.2 Extended allele depth calculation
 This script returns the number of reads for a sample at a site in addition to the percentage ancestry.  
 Usage example:
 $ cat filtered_variants2.vcf | ./AD_pct_ex.sh >ad_pct_ex.txt  
