@@ -206,8 +206,8 @@ $ python
 We ran this script utilizing the following required software (other versions of these will probably also work):  
 Python version 2.7.12 (Python Software Foundation, 2016)  
 matplotlib version 1.5.1 (Hunter, 2007; Matplotlib Development Team, 2016)  
-NumPy version 1.10.4 ??(NumPy Developers, 2016)  
-SciPy version 0.17.0 ()  
+NumPy version 1.10.4 (van der Walt et al., 2011; NumPy Developers, 2016)  
+SciPy version 0.17.0 (Jones et al., 2001; van der Walt et al., 2011; SciPy developers 2016)  
 
 ## Citing the repository
 
@@ -244,11 +244,11 @@ MacKenzie D., Meyering J. 2013. head (GNU coreutils). Version 8.21. Available at
   
 McKenna A., Hanna M., Banks E., Sivachenko A., Cibulskis K., Kernytsky A., Garimella K., Altshuler D., Gabriel S., Daly M., DePristo MA. 2010. The Genome Analysis Toolkit: A MapReduce framework for analyzing next-generation DNA sequencing data. Genome Research 20:1297–1303. DOI: 10.1101/gr.107524.110.  
   
-Matplotlib Development Team 2016. matplotlib. Version 1.5.1. Available at http://matplotlib.org.  
+Matplotlib Development Team. 2016. matplotlib. Version 1.5.1. [Accessed 2017 Sep 29]. Available from: https://github.com/matplotlib/matplotlib. doi: 10.5281/zenodo.44579.  
   
 NumPy Developers. 2016. NumPy. Version 1.10.4. [Accessed 2017 Sep 29]. Available from: https://github.com/numpy/numpy.  
   
-Python Software Foundation 2016. Python. Version 2.7.12. Available at https://www.python.org.  
+Python Software Foundation 2016. Python. Version 2.7.12. [Accessed 2016 Oct 1]. Available from: https://www.python.org.  
   
 SciPy developers. 2016. SciPy. Version 0.17.0. [Accessed 2017 Sep 29]. Available from: https://github.com/scipy/scipy.  
   
