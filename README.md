@@ -201,8 +201,11 @@ sort (GNU coreutils) - we used sort (GNU coreutils) version 8.21 (Haertel & Egge
 
 ### Check for window outliers
 Usage example:  
-$ python  
+$ python outlier_window_detection.py wnd_50k_noovlp.txt  
+  
+The script produces three graphical outputs:  
 
+  
 We ran this script utilizing the following required software (other versions of these will probably also work):  
 Python version 2.7.12 (Python Software Foundation, 2016)  
 matplotlib version 1.5.1 (Hunter, 2007; Matplotlib Development Team, 2016)  
