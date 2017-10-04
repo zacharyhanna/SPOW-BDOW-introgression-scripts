@@ -202,9 +202,12 @@ sort (GNU coreutils) - we used sort (GNU coreutils) version 8.21 (Haertel & Egge
 Usage example:  
 $ python outlier_window_detection.py wnd_50k_noovlp.txt  
   
-The script produces three graphical outputs:  
+The script produces four outputs (three graphical and one text file):  
+outlier_windows_histograms_by_sample.png : graphs a histogram of outlier window lengths for each sample  
+number_samples_in_outliers.png : graphs a histogram of the number of outlier windows that are either unique or shared by more than one sample  
+outliers_vs_analyzed_windows.png : for each sample, this graph plots the number of outlier windows versus the number of windows analyzed  
+outlier_window_stats.txt : this output is a single line giving the number of scaffolds that have outlier windows across all samples  
 
-  
 We ran this script utilizing the following required software (other versions of these will probably also work):  
 Python version 2.7.12 (Python Software Foundation, 2016)  
 matplotlib version 1.5.1 (Hunter, 2007; Matplotlib Development Team, 2016)  
