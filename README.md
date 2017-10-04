@@ -12,6 +12,7 @@ We here provide the scripts that we developed for analyzing introgression in who
     * [5.1 Allele depth only calculation](#51-allele-depth-only-calculation)
     * [5.2 Extended allele depth calculation](#52-extended-allele-depth-calculation)
   * [6. Sliding window calculation](#6-sliding-window-calculation)
+    * [6.1 sliding_window.sh](#61-sliding-windowsh)
   * [7. Compute means and standard deviations on allele depth file](#7-compute-means-and-standard-deviations-on-allele-depth-file)
     * [7.1 Get sample names from vcf](#71-get-sample-names-from-vcf)
     * [7.2 Merge sample names from vcf with means and standard deviations](#72-merge-sample-names-from-vcf-with-means-and-standard-deviations)
@@ -116,7 +117,7 @@ Each space-separated field after the scaffold and position fields is "Spotted Ow
 Ancestry percentage is between 0 and 1 and is the percentage of the sequences that support the Spotted Owl allele at this site fixed between our Spotted and Barred Owl reference sequences.  
 "-1:0" is output for no data for a sample at a site  
 ### 6. Sliding window calculation  
-#### sliding_window.sh
+#### 6.1 sliding_window.sh
 This script will run a sliding window analysis on output produced from ad_pct.txt, which does not contain any read coverage information.  
 Usage example:  
 ```
