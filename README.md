@@ -13,6 +13,7 @@ We here provide the scripts that we developed for analyzing introgression in who
     * [5.2 Extended allele depth calculation](#52-extended-allele-depth-calculation)
   * [6. Sliding window calculation](#6-sliding-window-calculation)
     * [6.1 sliding_window.sh](#61-sliding\_windowsh)
+    * [6.2 ext_fmt_sliding_window_reads.sh](#62-ext\_fmt\_sliding\_window\_readssh)
   * [7. Compute means and standard deviations on allele depth file](#7-compute-means-and-standard-deviations-on-allele-depth-file)
     * [7.1 Get sample names from vcf](#71-get-sample-names-from-vcf)
     * [7.2 Merge sample names from vcf with means and standard deviations](#72-merge-sample-names-from-vcf-with-means-and-standard-deviations)
@@ -121,6 +122,7 @@ Ancestry percentage is between 0 and 1 and is the percentage of the sequences th
 
 #### 6.1 sliding_window.sh
 This script will run a sliding window analysis on output produced from ad_pct.txt, which does not contain any read coverage information.  
+  
 Usage example:  
 ```
 $ cat ad_pct.txt | ./sliding_window.sh 50000 >wnd_50k_noovlp.txt  
@@ -159,6 +161,9 @@ This example calculates 50,000 base windows sliding 5,000 bases at a time.
 ```  
 $ ./sliding_window.sh ad_pct.txt 50000 5000 >wnd_50k_5k_slide.txt  
 ```
+
+#### 6.2 ext_fmt_sliding_window_reads.sh
+
 ### 7. Compute means and standard deviations on allele depth file
 AD_pct.txt : allele depth file from above examples  
 We are keeping the output for further use in the file "means_stdevs_ad.txt".  
