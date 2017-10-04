@@ -1,4 +1,4 @@
-# SPOW-BADO-introgression-scripts
+# SPOW-BDOW-introgression-scripts
 We here provide the scripts that we developed for analyzing introgression in whole genome sequences obtained from XXX. 
 
 ## Contents
