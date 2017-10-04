@@ -163,6 +163,32 @@ $ ./sliding_window.sh ad_pct.txt 50000 5000 >wnd_50k_5k_slide.txt
 ```
 
 #### 6.2 ext_fmt_sliding_window_reads.sh
+This is modified version of the sliding_window.sh script that will work with the output from AD_pct_ex.sh. The sliding window analysis needs to be conducted with this script to enable outlier detection with the outlier_window_detection.py script. Usage is identical to that of sliding_window.sh.  
+  
+Usage example:  
+```
+$ cat ad_pct_ex.txt | ./ext_fmt_sliding_window_reads.sh >wnd_50k_noovlp_ext.txt  
+```
+The above example calculates 50,000 bp windows with no overlap.  
+  
+"ext_fmt_sliding_window_reads.sh" shell script requirements:  
+GNU Grep - we used GNU Grep version 2.16 (Free Software Foundation, 2014) 
+
+Example output:  
+```
+$ head -n 3 wnd_50k_noovlp_ext.txt
+#scaffold12     552     292215  1415    0.074745 0.0392377 0.0733255 0.992282 0.0574987 0.0531025 0 0.0655141 0.0604773 0.997758 0.0667287 0.0647343 0.0300879 0.0442817 0.0614458 0.0856269 0.0607843 0.0909091 0.0390326 0.0925926 0.0659242 0.0550549 0.0649718 0.0442348 0.0648399 0.0712263 0.0426153 0.0657895 0.0610762 0.0487805 0.0492584 0.997751 0.999543 1 1 0.996109 0.0423661 0.0238786 0.0276817 0.0643652 0.075188 0.0613905 0.0581956 0.997938 1 0.0596817 1 0.997455 1 1 0.0544884 0.0670834 0.536692 0.497809 
+scaffold12      1       50000   225     0.0737705 0.142857 0.0707965 1 0.0777778 0.0328639 0 0.0736196 0.0518519 1 0.166667 0.0980392 0.127119 0.0406977 0.0545455 0.0869565 0.0535714 0.2 0.0804598 0.095 0.0882353 0.0500936 0.0651927 0.0857143 0.0872328 0.0678392 0.0950704 0.222222 0.122222 0.111111 0.0731061 1 1 1 1 1 0.0555556 0.0507246 0.119565 0.0571429 0.0967742 0.0555556 0.0840336 1 - 0.0461538 1 1 1 1 0.0670194 0.0696182 0.491082 0.528932 
+scaffold12      50001   100000  199     0.0258621 0.0447761 0.0396175 1 0.040293 0.0307692 0 0.0166667 0.0121655 1 0.0338983 0.0428571 0.0175439 0.0294118 0.0220588 0.0434783 0.010582 0 0.0373832 0.0178571 0.0245098 0.0418638 0.0420168 0.0368901 0.0356963 0.045098 0.00833333 0 0.0195195 0.05 0.0645161 0.995679 1 1 1 1 0 0.025 0.0238095 0.00724638 0.08 0.039604 0.0304348 1 1 0.0181818 1 1 1 1 0.00970018 0.0297659 0.512691 0.544737
+```
+Output is tab-separated.
+The line beginning with "#" is a summary line for the scaffold. The first field is the scaffold, second field is the start position of the first SNP on the scaffold, third field is the position of the last snp on that scaffold, fourth field is the number of snps in the scaffold. The fields following this are the average ancestry for all of the windows on this scaffold.  
+The successive lines provide:  
+
+Field 1 | Field 2 | Field 3 | Field 4 | Fields 5-  
+--- | --- | --- | --- | ---  
+scaffold / contig | start position of window | end position of window | number of SNPs in window (across all samples) | Average ancestry for sample in window  
+
 
 ### 7. Compute means and standard deviations on allele depth file
 AD_pct.txt : allele depth file from above examples  
