@@ -116,6 +116,8 @@ Each space-separated field after the scaffold and position fields is "Spotted Ow
 Ancestry percentage is between 0 and 1 and is the percentage of the sequences that support the Spotted Owl allele at this site fixed between our Spotted and Barred Owl reference sequences.  
 "-1:0" is output for no data for a sample at a site  
 ### 6. Sliding window calculation  
+#### sliding_window.sh
+This script will run a sliding window analysis on output produced from ad_pct.txt, which does not contain any read coverage information.  
 Usage example:  
 ```
 $ cat ad_pct.txt | ./sliding_window.sh 50000 >wnd_50k_noovlp.txt  
@@ -125,7 +127,7 @@ The above example calculates 50,000 bp windows with no overlap.
 "sliding_window.sh" shell script requirements:  
 GNU Grep - we used GNU Grep version 2.16 (Free Software Foundation, 2014)  
 
-#### Example of running full sliding window pipeline
+##### Example of running full sliding window pipeline
 As above, this example calculates 50,000 bp windows with no overlap.
 ```  
 $ ./vcf_qual_filter.sh raw_variants.vcf | ./AD_pct.sh >ad_pct.txt  
@@ -206,7 +208,7 @@ The script produces four outputs (three graphical and one text file):
 **outlier_windows_histograms_by_sample.png** : graphs a histogram of outlier window lengths for each sample  
 **number_samples_in_outliers.png** : graphs a histogram of the number of outlier windows that are either unique or shared by more than one sample  
 **outliers_vs_analyzed_windows.png** : for each sample, this graph plots the number of outlier windows versus the number of windows analyzed  
-outlier_window_stats.txt : this output is a single line giving the number of scaffolds that have outlier windows across all samples  
+**outlier_window_stats.txt** : this output is a single line giving the number of scaffolds that have outlier windows across all samples  
 
 We ran this script utilizing the following required software (other versions of these will probably also work):  
 Python version 2.7.12 (Python Software Foundation, 2016)  
