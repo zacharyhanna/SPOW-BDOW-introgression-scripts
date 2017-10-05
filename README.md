@@ -250,10 +250,16 @@ Usage example:
 $ python outlier_window_detection.py wnd_50k_noovlp_ext.txt  
 ```  
 The script produces four outputs (three graphical and one text file):  
-**outlier_windows_histograms_by_sample.png** : graphs a histogram of outlier window lengths for each sample  
+  
+**outlier_windows_histograms_by_sample.png** : graphs a histogram of outlier window lengths for each sample
+![alt text](https://github.com/zrhanna/SPOW-BDOW-introgression-scripts/blob/master/images/outlier_windows_histograms_by_sample.png)  
+  
 **number_samples_in_outliers.png** : graphs a histogram of the number of outlier windows that are either unique or shared by more than one sample
 ![alt text](https://github.com/zrhanna/SPOW-BDOW-introgression-scripts/blob/master/images/number_samples_in_outliers.png)  
+  
 **outliers_vs_analyzed_windows.png** : for each sample, this graph plots the number of outlier windows versus the number of windows analyzed  
+![alt text](https://github.com/zrhanna/SPOW-BDOW-introgression-scripts/blob/master/images/outliers_vs_analyzed_windows.png)  
+  
 **outlier_window_stats.txt** : this output is a single line giving the number of scaffolds that have outlier windows across all samples  
 
 We ran this script utilizing the following required software (other versions of these will probably also work):  
