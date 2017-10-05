@@ -17,6 +17,7 @@ We here provide the scripts that we developed for analyzing introgression in who
   * [7. Compute means and standard deviations on allele depth file](#7-compute-means-and-standard-deviations-on-allele-depth-file)
     * [7.1 Get sample names from vcf](#71-get-sample-names-from-vcf)
     * [7.2 Merge sample names from vcf with means and standard deviations](#72-merge-sample-names-from-vcf-with-means-and-standard-deviations)
+  * [8. Check for outlier windows](8-check-for-outlier-windows)
 * [Citing the Repository](#citing-the-repository)  
 * [References](#references)  
 
@@ -243,10 +244,11 @@ GNU Grep - we used GNU Grep version 2.16 (Free Software Foundation, 2014)
 head (GNU coreutils) - we used head (GNU coreutils) version 8.21 (Ihnat et al. 2013)  
 sort (GNU coreutils) - we used sort (GNU coreutils) version 8.21 (Haertel & Eggert 2013)  
 
-### Check for window outliers
+### 8. Check for outlier windows
 Usage example:  
-$ python outlier_window_detection.py wnd_50k_noovlp.txt  
-  
+```
+$ python outlier_window_detection.py wnd_50k_noovlp_ext.txt  
+```  
 The script produces four outputs (three graphical and one text file):  
 **outlier_windows_histograms_by_sample.png** : graphs a histogram of outlier window lengths for each sample  
 **number_samples_in_outliers.png** : graphs a histogram of the number of outlier windows that are either unique or shared by more than one sample  
