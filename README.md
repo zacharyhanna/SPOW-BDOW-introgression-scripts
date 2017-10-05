@@ -150,6 +150,7 @@ scaffold12      50001   100000  199     0.0258621 0.0447761 0.0396175 1 0.040293
 ```
 Output is tab-separated.
 The line beginning with "#" is a summary line for the scaffold.  
+  
 Field 1 | Field 2 | Field 3 | Field 4 | Fields 5-  
 --- | --- | --- | --- | ---  
 scaffold / contig | position of first SNP in scaffold | position of last snp in the scaffold | number of SNPs in window (across all samples) | Average ancestry for sample across all windows in scaffold  
@@ -196,7 +197,7 @@ The successive lines provide:
 
 Field 1 | Field 2 | Field 3 | Field 4 | Fields 5-  
 --- | --- | --- | --- | ---  
-scaffold / contig | start position of window | end position of window | number of SNPs in window (across all samples) | Average ancestry for sample in window  
+scaffold / contig | start position of window | end position of window | number of SNPs in window (across all samples) | Average ancestry for sample in window : total number of snps for this sample in the window : number of reads across all sites in the scaffold    
 
 
 ### 7. Compute means and standard deviations on allele depth file
