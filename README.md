@@ -153,7 +153,7 @@ The line beginning with "#" is a summary line for the scaffold.
   
 Field 1 | Field 2 | Field 3 | Field 4 | Fields 5-  
 --- | --- | --- | --- | ---  
-scaffold / contig | position of first SNP in scaffold | position of last snp in the scaffold | number of SNPs in window (across all samples) | Average ancestry for sample across all windows in scaffold  
+scaffold / contig | position of first SNP in scaffold | position of last SNP in the scaffold | number of SNPs in window (across all samples) | Average ancestry for sample across all windows in scaffold  
   
 The successive lines provide:  
 
@@ -191,14 +191,13 @@ The line beginning with "#" is a summary line for the scaffold.
 
 Field 1 | Field 2 | Field 3 | Field 4 | Fields 5-  
 --- | --- | --- | --- | ---  
-scaffold / contig | position of first SNP in scaffold | position of last snp in the scaffold | number of SNPs in window (across all samples) | Average ancestry for sample across all windows in the scaffold : total number of snps for this sample across all windows in the scaffold : this read subfield is meaningless in the summary line   
+scaffold / contig | position of first SNP in scaffold | position of last SNP in the scaffold | number of SNPs in window (across all samples) | Average ancestry for sample across all windows in the scaffold : total number of SNPs for this sample across all windows in the scaffold : this read subfield is meaningless in the summary line   
   
 The successive lines provide:  
 
 Field 1 | Field 2 | Field 3 | Field 4 | Fields 5-  
 --- | --- | --- | --- | ---  
-scaffold / contig | start position of window | end position of window | number of SNPs in window (across all samples) | Average ancestry for sample in window : total number of snps for this sample in the window : number of reads across all sites in the scaffold    
-
+scaffold / contig | start position of window | end position of window | number of SNPs in window (across all samples) | Average ancestry for sample in window : total number of SNPs for this sample in the window : number of reads across all variant sites in the scaffold  
 
 ### 7. Compute means and standard deviations on allele depth file
 AD_pct.txt : allele depth file from above examples  
