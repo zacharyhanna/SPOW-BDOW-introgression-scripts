@@ -68,7 +68,7 @@ awk -v SLIDE_SIZE=$slide_size -v SLIDES_IN_WND=$num_slides_in_wnd 'BEGIN {WndSiz
         printf "#%s\t%s\t%s\t%s\t", cur_scaff, first_snp, last_snp, snps_in_wnd
         for (ind=1; ind <= NUM_IND; ind++) {
            if (snps_used[ind]==0) val = "-"; else {val = adpct_sum[ind] / snps_used[ind]}
-           printf "%.2g\t%ds\t", val, snps_used[ind];
+           printf "%.2g:%d:%d\t", val, snps_used[ind], read_sum[ind];
         }
         printf "\n"
      }
