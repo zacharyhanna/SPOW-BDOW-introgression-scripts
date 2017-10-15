@@ -268,6 +268,31 @@ matplotlib version 1.5.1 (Hunter, 2007; Matplotlib Development Team, 2016)
 NumPy version 1.10.4 (van der Walt et al., 2011; NumPy Developers, 2016)  
 SciPy version 0.17.0 (Jones et al., 2001; van der Walt et al., 2011; SciPy developers 2016)  
 
+## Welch's _t_-test
+We ran Welch's _t_-tests to look for significant differences in the spotted owl ancestry of populations.  
+  
+Usage example:  
+  
+```
+$ python Welch_ttest.py ancestry_value.csv
+```
+The script produces an output file named "Welch_ttest_out.txt" with output like this:
+```
+Siskiyou vs Western Barred Owls
+calculated t-statistic, two-tailed p-value
+Ttest_indResult(statistic=-0.77077671527931058, pvalue=0.44863619081421191)
+AllWestern vs Eastern Barred Owls
+calculated t-statistic, two-tailed p-value
+Ttest_indResult(statistic=2.9678999739315834, pvalue=0.035617969491983037)
+Pre vs. Post Spotted Owls
+calculated t-statistic, two-tailed p-value
+Ttest_indResult(statistic=-0.93088180034592116, pvalue=0.52193033083919926)
+AllBarred vs AllSpotted Owls
+calculated t-statistic, two-tailed p-value
+Ttest_indResult(statistic=-1913.4944317390673, pvalue=3.0081979197771044e-43)
+```
+There are three lines for each _t_-test. The first gives the title of the populations compared. The second gives a description of the values on the third line of the output. The third line gives the _t_-test t-value and p-value.  
+
 ## Citing the repository
 
 #### Authorship
