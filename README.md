@@ -274,9 +274,9 @@ We ran Welch's _t_-tests to look for significant differences in the spotted owl 
   
 Input file format is a comma-separated value (CSV) file with the ancestry value in the first field and the population name in the second field:  
 ```
-ancestry_value1,population_name1
-ancestry_value2,population_name1
-ancestry_value3,population_name2
+0.068544,Eastern_Barred_Owl
+0.0695239,Eastern_Barred_Owl
+0.0683806,Siskiyou_Barred_Owl
 ```
 Usage example:  
   
