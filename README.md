@@ -272,6 +272,12 @@ SciPy version 0.17.0 (Jones et al., 2001; van der Walt et al., 2011; SciPy devel
 ## Welch's _t_-test
 We ran Welch's _t_-tests to look for significant differences in the spotted owl ancestry of populations.  
   
+Input file format is a comma-separated value (CSV) file with the ancestry value in the first field and the population name in the second field:  
+```
+ancestry_value1,population_name1
+ancestry_value2,population_name1
+ancestry_value3,population_name2
+```
 Usage example:  
   
 ```
