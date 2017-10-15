@@ -1,8 +1,8 @@
 import sys
 from scipy import stats
 import numpy as np
-# input file is a comma-separated value (csv) file with the population in the
-# first field and the ancestry value in the second field
+# input file is a comma-separated value (csv) file with the ancestry value in the
+# first field and the population name in the second field
 dataFile = sys.argv[1]
 
 pop_dict = {}
