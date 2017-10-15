@@ -300,6 +300,11 @@ calculated t-statistic, two-tailed p-value
 Ttest_indResult(statistic=-1913.4944317390673, pvalue=3.0081979197771044e-43)
 ```
 There are three lines for each _t_-test. The first gives the names of the populations compared. The second gives a description of the values on the third line of the output. The third line gives the _t_-test t-value and p-value.  
+  
+We ran this script utilizing the following required software (other versions of these will probably also work):  
+Python version 2.7.12 (Python Software Foundation, 2016)  
+NumPy version 1.10.4 (van der Walt et al., 2011; NumPy Developers, 2016)  
+SciPy version 0.17.0 (Jones et al., 2001; van der Walt et al., 2011; SciPy developers 2016)    
 
 ## Citing the repository
 
