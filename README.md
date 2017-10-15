@@ -18,6 +18,7 @@ We here provide the scripts that we developed for analyzing introgression in who
     * [7.1 Get sample names from vcf](#71-get-sample-names-from-vcf)
     * [7.2 Merge sample names from vcf with means and standard deviations](#72-merge-sample-names-from-vcf-with-means-and-standard-deviations)
   * [8. Check for outlier windows](#8-check-for-outlier-windows)
+* [Welch's t-test](#welch's-t--test)
 * [Citing the Repository](#citing-the-repository)  
 * [References](#references)  
 
@@ -278,6 +279,7 @@ $ python Welch_ttest.py ancestry_value.csv
 ```
 The script produces an output file named "Welch_ttest_out.txt" with output like this:
 ```
+$ cat Welch_ttest_out.txt
 Siskiyou vs Western Barred Owls
 calculated t-statistic, two-tailed p-value
 Ttest_indResult(statistic=-0.77077671527931058, pvalue=0.44863619081421191)
