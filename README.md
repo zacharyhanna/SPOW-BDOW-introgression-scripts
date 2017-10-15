@@ -299,7 +299,7 @@ AllBarred vs AllSpotted Owls
 calculated t-statistic, two-tailed p-value
 Ttest_indResult(statistic=-1913.4944317390673, pvalue=3.0081979197771044e-43)
 ```
-There are three lines for each _t_-test. The first gives the title of the populations compared. The second gives a description of the values on the third line of the output. The third line gives the _t_-test t-value and p-value.  
+There are three lines for each _t_-test. The first gives the names of the populations compared. The second gives a description of the values on the third line of the output. The third line gives the _t_-test t-value and p-value.  
 
 ## Citing the repository
 
