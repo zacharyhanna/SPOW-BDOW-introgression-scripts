@@ -318,8 +318,11 @@ k = number of individuals in input file (each line should have 2k fields)
 pop1 and pop2 are 2-line files giving the number of individuals in the population on the first line and the sample numbers corresponding to the members of the population  
   
 Output:
-piW1 piW2 piB Fst
-
+piW1 = pi within pop1  
+piW2 = pi within pop2  
+piB = pi between pop1 and pop2  
+Fst = fixation index between pop1 and pop2
+  
 ## Citing the repository
 
 #### Authorship
