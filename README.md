@@ -316,6 +316,14 @@ $ cat <input_file> | ./countFstPi k pop1 pop2
 ```
 k = number of individuals in input file (each line should have 2k fields)
 pop1 and pop2 are 2-line files giving the number of individuals in the population on the first line and the sample numbers corresponding to the members of the population  
+Example of pop file:  
+```
+$ cat pop1
+6
+1 2 3 4 5 6
+```
+line 1: 6 individuals in pop1  
+line 2: individuals 1-6 are in pop1 (note this is not the columns for pop1 as there are 2 columns per individual)  
   
 Output:
 piW1 = pi within pop1  
