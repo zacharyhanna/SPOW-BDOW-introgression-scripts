@@ -19,6 +19,7 @@ We here provide the scripts that we developed for analyzing introgression in who
     * [7.2 Merge sample names from vcf with means and standard deviations](#72-merge-sample-names-from-vcf-with-means-and-standard-deviations)
   * [8. Check for outlier windows](#8-check-for-outlier-windows)
 * [Welch's _t_-test](#welchs-t-test)
+* [Nucleotide diversity and FST calculation](#Nucleotide-diversity-and-fst-calculation)
 * [Citing the Repository](#citing-the-repository)  
 * [References](#references)  
 
@@ -305,6 +306,19 @@ We ran this script utilizing the following required software (other versions of 
 Python version 2.7.12 (Python Software Foundation, 2016)  
 NumPy version 1.10.4 (van der Walt et al., 2011; NumPy Developers, 2016)  
 SciPy version 0.17.0 (Jones et al., 2001; van der Walt et al., 2011; SciPy developers 2016)    
+
+## Nucleotide diversity and FST calculation
+countFstPi is a C script (provided executable compiled on an Ubuntu system) that takes an input file (of # of reads supporting ref vs. alt allele for each individual, without chr or pos information) and outputs pi and Fst. Calculations choose a random read from each individual at each site. A seed file called "seedms" that provides the initial seeds of the random numbers must be present for the program to work.  
+  
+Usage example:
+```
+$ cat <input_file> | ./countFstPi k pop1 pop2
+```
+k = number of individuals in input file (each line should have 2k fields)
+pop1 and pop2 are 2-line files giving the number of individuals in the population on the first line and the sample numbers corresponding to the members of the population  
+  
+Output:
+piW1 piW2 piB Fst
 
 ## Citing the repository
 
