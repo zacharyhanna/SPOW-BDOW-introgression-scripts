@@ -19,7 +19,7 @@ We here provide the scripts that we developed for analyzing introgression in who
     * [7.2 Merge sample names from vcf with means and standard deviations](#72-merge-sample-names-from-vcf-with-means-and-standard-deviations)
   * [8. Check for outlier windows](#8-check-for-outlier-windows)
 * [Welch's _t_-test](#welchs-t-test)
-* [Nucleotide diversity and FST calculation](#Nucleotide-diversity-and-fst-calculation)
+* [Nucleotide diversity and FST calculation](#nucleotide-diversity-and-fst-calculation)
 * [Citing the Repository](#citing-the-repository)  
 * [References](#references)  
 
@@ -323,7 +323,7 @@ $ cat pop1
 1 2 3 4 5 6
 ```
 line 1: 6 individuals in pop1  
-line 2: individuals 1-6 are in pop1 (note this is not the columns for pop1 as there are 2 columns per individual)  
+line 2: individuals 1-6 are in pop1 (note this is not designating the input file columns for pop1 as there are 2 columns per individual)  
   
 Output:
 piW1 = pi within pop1  
