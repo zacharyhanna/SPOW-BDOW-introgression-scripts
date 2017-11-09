@@ -308,6 +308,29 @@ NumPy version 1.10.4 (van der Walt et al., 2011; NumPy Developers, 2016)
 SciPy version 0.17.0 (Jones et al., 2001; van der Walt et al., 2011; SciPy developers 2016)    
 
 ## Nucleotide diversity and FST calculation
+### Creating input file
+vcf_qual_filter_pi.sh is a script to filter the raw variant file to exclude contaminant scaffolds, only keep sites with >50 quality,
+remove sites where our reference sample was homozygous alternate, filter out high coverage sites, and only retain biallelic sites.  
+  
+script requirements:  
+MAWK, if available - we used MAWK version 1.2 (Brennan 1994).  
+If MAWK is not available, uses GNU Awk (GAWK) - we used GAWK version 4.0.1 (Free Software Foundation 2012)
+  
+Specifics to our analyses that have affected the code:  
+1. Specific sample fields.  
+   * Field 43 in the vcf corresponded with the reference Spotted Owl sample.    
+2. Our reference genome had some contaminant or mitochondrial scaffolds, which we removed from our analyses.  
+   * You could just take out the line that throws out the following scaffolds: C7961234, C7963448, C7970814, C8091874, scaffold3674.  
+3. We only examined sites with a Phred-scaled probability >50 that a polymorphism exists at that site.  
+   * This was the "QUAL" field, which was field 6 of the vcf 
+4. We only kept sites with <301 coverage in the DP field.
+  
+Usage example:  
+```
+$ ./vcf_qual_filter_pi.sh raw_variants.vcf >filtered_variants_pi.vcf
+```
+
+### Actually calculating statistics
 countFstPi is a C script (provided executable compiled on an Ubuntu system) that takes an input file (of # of reads supporting ref vs. alt allele for each individual, without chr or pos information) and outputs pi and Fst. Calculations choose a random read from each individual at each site. A seed file called "seedms" that provides the initial seeds of the random numbers must be present for the program to work.  
   
 Usage example:
