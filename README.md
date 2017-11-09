@@ -86,11 +86,12 @@ $ cat filtered_variants2_dp_means_stdev.txt
 0.745503,0.913129 0.34499,0.599295 0.996806,1.05703 1.07951,1.10409 0.627326,0.826752 1.0912,1.11578 15.5489,5.81112 1.52076,1.35264 0.960982,1.04229 0.35384,0.604826 0.44408,0.680869 0.297244,0.553016 0.515357,0.735895 0.421296,0.662121 0.354241,0.608053 0.277709,0.536011 0.947581,1.03082 0.0355873,0.189918 0.751939,0.899872 0.482803,0.711412 0.722469,0.87494 1.74519,1.40872 0.944969,1.01582 2.16733,1.5994 6.40654,3.13418 2.07245,1.60605 0.975839,1.04753 0.11785,0.348755 0.713162,0.880505 0.59747,0.812452 0.853734,0.985254 1.38034,1.22845 1.98464,1.49242 60.8151,15.9385 0.168379,0.418069 0.495495,0.731765 0.377467,0.625025 0.72346,0.897134 0.510975,0.735475 0.75375,0.903665 0.0810105,0.286488 0.59008,0.797603 0.759363,0.90252 0.448514,0.697064 0.0166811,0.13067 0.262981,0.551261 0.0439719,0.211284 0.261251,0.522411 1.10659,1.13334 0.850381,0.964539 3.49167,2.20528 4.54619,2.81694 1.62449,1.39522 2.20901,1.61496
 ```
 Each space-separated field in the output is "mean coverage,standard deviation".  
+
 ### 5. Allele depth calculation
 There are two versions of this script whose output function with different downstream scripts.  
 Both "AD_pct.sh" and "AD_pct_ex.sh" require:  
 GNU Awk - we used GNU Awk version 4.0.1 (Free Software Foundation, 2012)  
-cut (GNU coreutils) - we used cut (GNU coreutils) version 8.21 (Ihnat et al. 2013)
+
 #### 5.1 Allele depth only calculation
 Usage example:  
 ```
@@ -104,7 +105,8 @@ scaffold18 520 0 -1 -1 1 -1 0 0 -1 0 -1 0 -1 -1 -1 -1 -1 0 -1 0 0 -1 0 0 0 0 0 -
 ```
 Each space-separated field after the scaffold and position fields is "Spotted Owl ancestry percentage".  
 Ancestry percentage is between 0 and 1 and is the percentage of the sequences that support the Spotted Owl allele at this site fixed between our Spotted and Barred Owl reference sequences.  
-"-1:0" is output for no data for a sample at a site 
+"-1" is output for no data for a sample at a site 
+
 #### 5.2 Extended allele depth calculation
 This script returns the number of reads for a sample at a site in addition to the percentage ancestry.  
 Usage example:  
@@ -308,7 +310,7 @@ NumPy version 1.10.4 (van der Walt et al., 2011; NumPy Developers, 2016)
 SciPy version 0.17.0 (Jones et al., 2001; van der Walt et al., 2011; SciPy developers 2016)    
 
 ## Nucleotide diversity and FST calculation
-### Creating input file
+### Creating input file - vcf_qual_filter_pi.sh
 vcf_qual_filter_pi.sh is a script to filter the raw variant file to exclude contaminant scaffolds, only keep sites with >50 quality,
 remove sites where our reference sample was homozygous alternate, filter out high coverage sites, and only retain biallelic sites.  
   
@@ -329,6 +331,23 @@ Usage example:
 ```
 $ ./vcf_qual_filter_pi.sh raw_variants.vcf >filtered_variants_pi.vcf
 ```
+### Creating input file - vcf_qual_filter_pi.sh
+GNU Awk - we used GNU Awk version 4.0.1 (Free Software Foundation, 2012)  
+
+####editing here
+Usage example:  
+```
+$ cat filtered_variants2.vcf | ./AD_pct.sh >ad_pct.txt  
+```
+Example output:
+```
+$ head -n 2 ad_pct.txt
+scaffold18 506 -1 -1 0 1 -1 0 0 -1 0 -1 0 -1 -1 -1 -1 -1 0 -1 0 0 -1 0 0 0 0 0 -1 -1 -1 0 0 1 1 1 1 1 -1 0 -1 -1 -1 0 -1 -1 -1 -1 -1 -1 -1 1 -1 0 1 1
+scaffold18 520 0 -1 -1 1 -1 0 0 -1 0 -1 0 -1 -1 -1 -1 -1 0 -1 0 0 -1 0 0 0 0 0 -1 -1 -1 0 0 1 -1 1 -1 1 -1 0 -1 -1 -1 0 -1 -1 -1 -1 -1 1 -1 1 -1 0 1 0.67
+```
+Each space-separated field after the scaffold and position fields is "Spotted Owl ancestry percentage".  
+Ancestry percentage is between 0 and 1 and is the percentage of the sequences that support the Spotted Owl allele at this site fixed between our Spotted and Barred Owl reference sequences.  
+"-1" is output for no data for a sample at a site 
 
 ### Actually calculating statistics
 countFstPi is a C script (provided executable compiled on an Ubuntu system) that takes an input file (of # of reads supporting ref vs. alt allele for each individual, without chr or pos information) and outputs pi and Fst. Calculations choose a random read from each individual at each site. A seed file called "seedms" that provides the initial seeds of the random numbers must be present for the program to work.  
