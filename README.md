@@ -376,9 +376,7 @@ README.md author: Zachary R. Hanna
 
 Please cite this repository as follows:  
 
-Hanna ZR, Henderson JB, Wall JD. 2017. SPOW-BDOW-introgression-scripts. Version 1.0.0. *Zenodo*. DOI:  
-
-[![DOI](https://zenodo.org/badge/99390763.svg)](https://zenodo.org/badge/latestdoi/99390763)  
+Hanna ZR, Henderson JB, Wall JD. 2017. SPOW-BDOW-introgression-scripts. Version 1.0.0. *Zenodo*. DOI: [![DOI](https://zenodo.org/badge/99390763.svg)](https://zenodo.org/badge/latestdoi/99390763)  
 
 ## References
 DePristo MA., Banks E., Poplin R., Garimella KV., Maguire JR., Hartl C., Philippakis AA., del Angel G., Rivas MA., Hanna M., McKenna A., Fennell TJ., Kernytsky AM., Sivachenko AY., Cibulskis K., Gabriel SB., Altshuler D., Daly MJ. 2011. A framework for variation discovery and genotyping using next-generation DNA sequencing data. *Nature Genetics* 43:491–498. DOI: 10.1038/ng.806.  
