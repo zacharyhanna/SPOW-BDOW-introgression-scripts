@@ -1,4 +1,4 @@
-# SPOW-BDOW-lowcov-scripts
+# SPOW-BDOW-introgression-scripts
 We here provide the scripts that we developed for analyzing introgression in low coverage whole genome sequences obtained from spotted and barred owls.
 
 ## Contents
