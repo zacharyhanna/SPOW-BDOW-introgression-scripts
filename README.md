@@ -1,5 +1,5 @@
 # SPOW-BDOW-introgression-scripts
-We here provide the scripts that we developed for analyzing introgression in whole genome sequences obtained from XXX.
+We here provide the scripts that we developed for analyzing introgression in whole genome sequences obtained from spotted and barred owls.
 
 ## Contents
 * [Introduction](#introduction)  
