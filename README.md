@@ -376,34 +376,36 @@ README.md author: Zachary R. Hanna
 
 Please cite this repository as follows:  
 
-Hanna ZR, Henderson JB, Wall JD. 2017. SPOW-BDOW-introgression-scripts. Version 1.0.0. Zenodo. DOI:  
+Hanna ZR, Henderson JB, Wall JD. 2017. SPOW-BDOW-introgression-scripts. Version 1.0.0. *Zenodo*. DOI:  
+
+[![DOI](https://zenodo.org/badge/99390763.svg)](https://zenodo.org/badge/latestdoi/99390763)  
 
 ## References
-DePristo MA., Banks E., Poplin R., Garimella KV., Maguire JR., Hartl C., Philippakis AA., del Angel G., Rivas MA., Hanna M., McKenna A., Fennell TJ., Kernytsky AM., Sivachenko AY., Cibulskis K., Gabriel SB., Altshuler D., Daly MJ. 2011. A framework for variation discovery and genotyping using next-generation DNA sequencing data. Nature Genetics 43:491–498. DOI: 10.1038/ng.806.  
+DePristo MA., Banks E., Poplin R., Garimella KV., Maguire JR., Hartl C., Philippakis AA., del Angel G., Rivas MA., Hanna M., McKenna A., Fennell TJ., Kernytsky AM., Sivachenko AY., Cibulskis K., Gabriel SB., Altshuler D., Daly MJ. 2011. A framework for variation discovery and genotyping using next-generation DNA sequencing data. *Nature Genetics* 43:491–498. DOI: 10.1038/ng.806.  
 
-Fox B., Ramey C. 2013. echo (GNU coreutils). Version 8.21. Available at <http://www.gnu.org/software/coreutils/coreutils.html>.  
+Fox B., Ramey C. 2013. echo (GNU coreutils). Version 8.21. Available from: http://www.gnu.org/software/coreutils/coreutils.html.  
 
-Free Software Foundation. 2012. GNU Awk. Version 4.0.1. Available at <https://www.gnu.org/software/gawk/>.  
+Free Software Foundation. 2012. GNU Awk. Version 4.0.1. Available from: https://www.gnu.org/software/gawk/.  
 
-Free Software Foundation 2014. GNU Grep. Version 2.16. Available at <https://www.gnu.org/software/grep/>.  
+Free Software Foundation 2014. GNU Grep. Version 2.16. Available from: https://www.gnu.org/software/grep/.  
 
-Granlund T., Stallman RM. 2013. cat (GNU coreutils). Version 8.21. Available at <http://www.gnu.org/software/coreutils/coreutils.html>.  
+Granlund T., Stallman RM. 2013. cat (GNU coreutils). Version 8.21. Available from: http://www.gnu.org/software/coreutils/coreutils.html.  
 
-Haertel M., Eggert P. 2013. sort (GNU coreutils). Version 8.21. Available at <http://www.gnu.org/software/coreutils/coreutils.html>.  
+Haertel M., Eggert P. 2013. sort (GNU coreutils). Version 8.21. Available from: http://www.gnu.org/software/coreutils/coreutils.html.  
 
-Hunter JD. 2007. Matplotlib: A 2D graphics environment. Computing In Science & Engineering. 9:90–95. doi: 10.1109/MCSE.2007.55.  
+Hunter JD. 2007. Matplotlib: A 2D graphics environment. *Computing In Science & Engineering*. 9:90–95. doi: 10.1109/MCSE.2007.55.  
 
-Ihnat DM., MacKenzie D., Meyering J. 2013. cut (GNU coreutils). Version 8.21. Available at <http://www.gnu.org/software/coreutils/coreutils.html>.  
+Ihnat DM., MacKenzie D., Meyering J. 2013. cut (GNU coreutils). Version 8.21. Available from: http://www.gnu.org/software/coreutils/coreutils.html.  
 
 Jones E, Oliphant T, Peterson P, SciPy developers. 2001. SciPy: Open Source Scientific Tools for Python. [Accessed 2017 Sep 29]. Available from: http://www.scipy.org.  
 
-MacKenzie D. 2013. fold (GNU coreutils). Version 8.21. Available at <http://www.gnu.org/software/coreutils/coreutils.html>.  
+MacKenzie D. 2013. fold (GNU coreutils). Version 8.21. Available from: http://www.gnu.org/software/coreutils/coreutils.html.  
 
-MacKenzie D., Meyering J. 2013. head (GNU coreutils). Version 8.21. Available at <http://www.gnu.org/software/coreutils/coreutils.html>.  
+MacKenzie D., Meyering J. 2013. head (GNU coreutils). Version 8.21. Available from: http://www.gnu.org/software/coreutils/coreutils.html.  
 
-McKenna A., Hanna M., Banks E., Sivachenko A., Cibulskis K., Kernytsky A., Garimella K., Altshuler D., Gabriel S., Daly M., DePristo MA. 2010. The Genome Analysis Toolkit: A MapReduce framework for analyzing next-generation DNA sequencing data. Genome Research 20:1297–1303. DOI: 10.1101/gr.107524.110.  
+McKenna A., Hanna M., Banks E., Sivachenko A., Cibulskis K., Kernytsky A., Garimella K., Altshuler D., Gabriel S., Daly M., DePristo MA. 2010. The Genome Analysis Toolkit: A MapReduce framework for analyzing next-generation DNA sequencing data. *Genome Research* 20:1297–1303. DOI: 10.1101/gr.107524.110.  
 
-Matplotlib Development Team. 2016. matplotlib. Version 1.5.1. [Accessed 2017 Sep 29]. Available from: https://github.com/matplotlib/matplotlib. doi: 10.5281/zenodo.44579.  
+Matplotlib Development Team. 2016. matplotlib. Version 1.5.1. [Accessed 2017 Sep 29]. Available from: https://github.com/matplotlib/matplotlib. DOI: 10.5281/zenodo.44579.  
 
 NumPy Developers. 2016. NumPy. Version 1.10.4. [Accessed 2017 Sep 29]. Available from: https://github.com/numpy/numpy.  
 
@@ -411,6 +413,6 @@ Python Software Foundation 2016. Python. Version 2.7.12. [Accessed 2016 Oct 1]. 
 
 SciPy developers. 2016. SciPy. Version 0.17.0. [Accessed 2017 Sep 29]. Available from: https://github.com/scipy/scipy.  
 
-van der Auwera GA., Carneiro MO., Hartl C., Poplin R., del Angel G., Levy-Moonshine A., Jordan T., Shakir K., Roazen D., Thibault J., Banks E., Garimella KV., Altshuler D., Gabriel S., DePristo MA. 2013. From FastQ data to high confidence variant calls: the Genome Analysis Toolkit best practices pipeline. Current Protocols in Bioinformatics 11:11.10.1-11.10.33. DOI: 10.1002/0471250953.bi1110s43.  
+van der Auwera GA., Carneiro MO., Hartl C., Poplin R., del Angel G., Levy-Moonshine A., Jordan T., Shakir K., Roazen D., Thibault J., Banks E., Garimella KV., Altshuler D., Gabriel S., DePristo MA. 2013. From FastQ data to high confidence variant calls: the Genome Analysis Toolkit best practices pipeline. *Current Protocols in Bioinformatics* 11:11.10.1-11.10.33. DOI: 10.1002/0471250953.bi1110s43.  
 
-van der Walt S, Colbert SC, Varoquaux G. 2011. The NumPy Array: A Structure for Efficient Numerical Computation. Computing in Science & Engineering. 13:22–30. doi: 10.1109/MCSE.2011.37.  
+van der Walt S, Colbert SC, Varoquaux G. 2011. The NumPy Array: A Structure for Efficient Numerical Computation. *Computing in Science & Engineering*. 13:22–30. DOI: 10.1109/MCSE.2011.37.  
