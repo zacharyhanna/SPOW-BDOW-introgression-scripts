@@ -376,7 +376,7 @@ README.md author: Zachary R. Hanna
 
 Please cite this repository as follows:  
 
-<a href="https://orcid.org/0000-0002-0210-7261" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">orcid.org/0000-0002-0210-7261</a>Hanna ZR, Henderson JB, Wall JD. 2017. SPOW-BDOW-introgression-scripts. Version 1.1.0. *Zenodo*. [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1065074.svg)](https://doi.org/10.5281/zenodo.1065074)  
+<a href="https://orcid.org/0000-0002-0210-7261" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">Hanna ZR</a>, Henderson JB, Wall JD. 2017. SPOW-BDOW-introgression-scripts. Version 1.1.0. *Zenodo*. [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1065074.svg)](https://doi.org/10.5281/zenodo.1065074)  
 
 ## References
 DePristo MA., Banks E., Poplin R., Garimella KV., Maguire JR., Hartl C., Philippakis AA., del Angel G., Rivas MA., Hanna M., McKenna A., Fennell TJ., Kernytsky AM., Sivachenko AY., Cibulskis K., Gabriel SB., Altshuler D., Daly MJ. 2011. A framework for variation discovery and genotyping using next-generation DNA sequencing data. *Nature Genetics* 43:491–498. DOI: 10.1038/ng.806.  
