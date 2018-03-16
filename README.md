@@ -369,7 +369,7 @@ Fst = fixation index between pop1 and pop2
 ## Citing the repository
 
 #### Authorship
-Code authors: James B. Henderson, jhenderson@calacademy.org; Zachary R. Hanna, zachanna@berkeley.edu; Jeffrey D. Wall  
+Code authors: James B. Henderson, jhenderson@calacademy.org; <a href="https://orcid.org/0000-0002-0210-7261" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">Zachary R. Hanna</a>, zachary.hanna@ucsf.edu; Jeffrey D. Wall  
 README.md author: Zachary R. Hanna  
 
 #### Version 1.1.0
