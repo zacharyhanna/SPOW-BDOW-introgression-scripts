@@ -66,6 +66,9 @@ Example output:
 ```
 meanDP = 129.19,stdevDP = 34.2783,number of sites = 5821431  
 ```
+Script requirements:  
+GNU Awk - we used GNU Awk version 4.0.1 (Free Software Foundation, 2012)  
+
 ### 3. Exclude sites with excessive coverage
 We excluded sites with coverage in excess of the mean + 5σ (we only kept sites with coverage <301 X in our data set), as suggested by the GATK documentation (https://software.broadinstitute.org/gatk/guide/article?id=3225).  
 
@@ -74,7 +77,7 @@ Usage example:
 $ cat filtered_variants.vcf | ./vcf_dp_filter.sh >filtered_variants2.vcf  
 ```
   
-script requirements:  
+Script requirements:  
 GNU Awk - we used GNU Awk version 4.0.1 (Free Software Foundation, 2012)  
 
 ### 4. Calculation of coverage depth per sample
@@ -91,7 +94,7 @@ $ cat filtered_variants2_dp_means_stdev.txt
 ```
 Each space-separated field in the output is "mean coverage,standard deviation".  
 
-script requirements:  
+Script requirements:  
 GNU Awk - we used GNU Awk version 4.0.1 (Free Software Foundation, 2012)  
 
 ### 5. Allele depth calculation
