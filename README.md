@@ -73,7 +73,8 @@ Usage example:
 ```
 $ cat filtered_variants.vcf | ./vcf_dp_filter.sh >filtered_variants2.vcf  
 ```
-
+  
+script requirements:  
 GNU Awk - we used GNU Awk version 4.0.1 (Free Software Foundation, 2012)  
 
 ### 4. Calculation of coverage depth per sample
