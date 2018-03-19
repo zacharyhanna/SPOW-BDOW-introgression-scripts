@@ -60,7 +60,7 @@ We are using the filtered set of sites for calculation of the average coverage.
 
 Usage example:  
 ```
-$ cat filtered_variants.vcf | ./dp_cov_script.sh
+$ ./dp_cov_script.sh filtered_variants.vcf
 ```  
 Example output:  
 ```
@@ -85,7 +85,7 @@ This step is not actually required in the pipeline, but we calculated the mean a
 
 Usage example:  
 ```
-$ cat filtered_variants2.vcf | ./DP_means_std_dev.sh | head -1 >filtered_variants2_dp_means_stdev.txt  
+$ ./DP_means_std_dev.sh filtered_variants2.vcf | head -1 >filtered_variants2_dp_means_stdev.txt  
 ```
 Example output:
 ```
@@ -105,7 +105,7 @@ GNU Awk - we used GNU Awk version 4.0.1 (Free Software Foundation, 2012)
 #### 5.1 Allele depth only calculation
 Usage example:  
 ```
-$ cat filtered_variants2.vcf | ./AD_pct.sh >ad_pct.txt  
+$ ./AD_pct.sh filtered_variants2.vcf >ad_pct.txt  
 ```
 Example output:
 ```
@@ -121,7 +121,7 @@ Ancestry percentage is between 0 and 1 and is the percentage of the sequences th
 This script returns the number of reads for a sample at a site in addition to the percentage ancestry.  
 Usage example:  
 ```
-$ cat filtered_variants2.vcf | ./AD_pct_ex.sh >ad_pct_ex.txt  
+$ ./AD_pct_ex.sh filtered_variants2.vcf >ad_pct_ex.txt  
 ```  
 Example output:  
 ```
