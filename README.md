@@ -74,7 +74,7 @@ We excluded sites with coverage in excess of the mean + 5σ (we only kept sites 
 
 Usage example:  
 ```
-$ cat filtered_variants.vcf | ./vcf_dp_filter.sh >filtered_variants2.vcf  
+$ ./vcf_dp_filter.sh filtered_variants.vcf >filtered_variants2.vcf  
 ```
   
 Script requirements:  
