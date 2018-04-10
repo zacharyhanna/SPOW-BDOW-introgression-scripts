@@ -8,7 +8,7 @@ awk 'NR==1{if(NF==1 && $1 > 0) {dp_pos=$1};
               print m > "/dev/stderr";
             if(!dp_pos)exit; if(NF==1)next;
           }
-      {maxi=NF-2; snps++;
+      {maxi=NF; snps++;
         for(f=3; f<=NF; f++) {
           if(split($f,a,":") >= dp_pos) {
             sum[f] += a[dp_pos]; sqrsum[f] += (a[dp_pos])^2;
