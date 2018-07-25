@@ -2,8 +2,6 @@ import sys
 import matplotlib
 import matplotlib.pyplot as plt
 import pandas as pd
-from itertools import cycle
-import seaborn as sns
 # putting the data into an array section
 dataTable = sys.argv[1]
 
@@ -72,30 +70,3 @@ point6 = plt.scatter([],[],color="#f0e442",marker='o',label='Hybrid',lw=0, s=60)
 plt.legend(handles=[point1,point2,point3,point4,point5,point6],scatterpoints=1)
 plt.savefig('foo.eps', bbox_inches='tight')
 plt.show()
-
-'''
-x = np.asarray(probe_cov, dtype=float)
-y = np.asarray(capt_cov, dtype=float)
-
-groups = df.groupby('cat')
-markers = ['x','o','^']
-
-# Plot
-fig, ax = plt.subplots()
-for (name, group), marker in zip(groups, cycle(markers)):
-    ax.plot(group.anc, group.cov, marker=marker)
-
-#red_patch = mpatches.Patch(color='red', label='The red data')
-#plt.legend(handles=[red_patch])
-
-#handles, labels = ax.get_legend_handles_labels()
-#print handles
-#print labels
-#ax.legend(handles, labels)
-#plt.legend()
-plt.show()
-#x = np.asarray(probe_cov, dtype=float)
-#y = np.asarray(capt_cov, dtype=float)
-
-#print ancestry, coverage, category
-'''

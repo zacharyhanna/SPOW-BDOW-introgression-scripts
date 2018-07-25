@@ -160,7 +160,7 @@ def grab_data(file_in):
                                                 numoutliers_dict[samp]=1
                                             if samp in wind_dict:
                                                 if scaf in wind_dict[samp]:
-                                                    if wind_dict[samp][scaf][-1][0] < st_idx <= wind_dict[samp][scaf][-1][1]+1:
+                                                    if wind_dict[samp][scaf][-1][0] < st_idx <= wind_dict[samp][scaf][-1][1]+1: #check if overlapping
                                                         wind_dict[samp][scaf][-1][1]=end_idx
                                                     else:
                                                         wind_dict[samp][scaf].append([st_idx,end_idx])
@@ -174,6 +174,7 @@ def grab_data(file_in):
     return wind_dict, numwind_dict, numoutliers_dict
 
 def make_hist_dict(wind_dict):
+    '''Return a dictionary with samples as keys to lists of outlier window lengths.'''
     hist_dict = {}
     for sample in wind_dict:
         hist_dict[sample]=[]
@@ -337,7 +338,7 @@ for sampkey in sorted_sample_ls:
         hist_values.append([sampkey,xedges,new_yedges,sample_dict[int(sampkey)][1],color_dict[sample_dict[int(sampkey)][1]],sample_order_num[sampkey]])
 
 for nodivval in hist_values:
-    nodivval[2] = np.divide(nodivval[2],float(filled_wind_dict[1][nodivval[0]]))
+    nodivval[2] = np.divide(nodivval[2],float(filled_wind_dict[1][nodivval[0]])) # scaling y-edges
 new_hist_vals = sorted(hist_values, key=lambda x: (x[5],x[2][0])) #sorts hist_values list by x[5] (sample_order_num[sampkey]]) first and then x[2][0] (the first element of new_yedges, which is the height of the 50kb bin)
 new2_hist_vals = new_hist_vals
 start_z_ax = 0
@@ -374,4 +375,4 @@ point5 = plt.Rectangle((0,0),1,1,color="#0072b2",edgecolor="#0072b2",label='Spot
 
 ax.legend([point1,point2,point3,point5],['Barred Owl (western)','Barred Owl (Siskiyou)','Barred Owl (eastern)','Spotted Owl (post-contact)'],loc=2,fontsize='small')
 fig.tight_layout()
-fig.savefig('outlier_windows_histograms_by_sample.png', bbox_inches='tight',pad_inches=0)#,pad_inches=0)
+fig.savefig('outlier_windows_histograms_by_sample.eps', bbox_inches='tight',pad_inches=0.2)#,pad_inches=0)
